@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study With Jiu🐰</title>
+
+    <!-- sns 공유 -->
+    <meta property="og:site_name" content="Study With Dreamcatcher">
+    <meta property="og:title" content="Study With Dreamcatcher">
+    <meta property="og:description" content="드림캐쳐와 함께 공부하기 (Study With Dreamcatcher)">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../img/sns_thum.png">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <!-- CSS  -->
+    <link href="../css/font.css" rel="stylesheet" />
+    <link href="../css/common.css?ver=091515?44529" rel="stylesheet" />
+    <link href="../css/reset.css?ver=0907" rel="stylesheet" />
+    <link href="../css/sub_one_by_one.css?ver=0902237" rel="stylesheet" />
+
+    <!-- Font awesome icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+</head>
+
+
+<!-- 멤버 마이크 -->
+<style>
+    .side_jiu .speak_act {
+        display: block !important;
+    }
+
+    /* side menu 선택된 멤버 불빛*/
+    .side_jiu .side_mem_img {
+        box-shadow: 0px 0px 10px #8749F2;
+    }
+</style>
+
+<body>
+    <!-- 로딩 -->
+     <div class="loading_wrap" id="loading_icon">
+          <div class="loading_img">
+                    <img src="../img/loading_icon.png">
+          </div>
+     </div>
+
+
+    <!-- 공통 위젯이 들어갈 위치 -->
+    <div id="common_widget"></div>
+
+    <main>
+        <!-- 화상 CAM -->
+        <div class="cam_wrap">
+            <ul class="cam_all cam_one_by_one">
+                <li class="cam_me">
+                    <!-- 대기/로드중이미지 -->
+                    <span class="waiting_text">
+                        Please allow access to the camera.<br>
+                        (카메라 권한을 허용해주세요)
+                    </span>
+                    <video muted playsinline autoplay="true" id="videoElement">
+                    </video>
+                    <div class="mute_mic">
+                        <img src="../img/mic_mute.png">
+                    </div>
+                    <!-- 내 캠 허용시 -->
+                </li>
+
+                <li class="cam_jiu">
+                    <div class="video-container">
+                        <div class="wating_img">
+                            <img class="cam_back_img" src="../img/지유_profile.jpg">
+                            <div class="inner_img"><img src="../img/지유_profile.jpg"></div>
+                        </div>
+                        <!-- 로컬 30분짜리 영상 X 7 TEST  -->
+                        <video controls autoplay muted loop playsinline preload="none">
+                            <source src="../vid/swdc_jiu.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="mute_mic mem_mute_mic"><img src="../img/mic_mute.png"></div>
+                    <p class="mem_cam_name">🐰지유</p>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <!-- jquery-ui-touch-punch -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js">
+    </script>
+
+
+    <script>
+        // 공통 위젯을 로드하는 함수
+        function loadCommonWidget() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // 공통 위젯을 삽입할 위치에 내용을 넣습니다.
+                    document.getElementById("common_widget").innerHTML = this.responseText;
+
+                    // 공통 위젯이 로드된 후 sub_common.js 파일을 동적으로 로드합니다.
+                    var script = document.createElement("script");
+                    script.src = "../js/sub_common.js?ver=09135wd8";
+                    script.type = "text/javascript";
+                    document.body.appendChild(script); // 스크립트를 body에 추가
+
+                    // 스크립트 로드가 완료되면 스플래시 화면을 숨깁니다.
+                    script.onload = function () {
+                        var loading_icon = document.getElementById('loading_icon');
+                        if (loading_icon) {
+                            loading_icon.style.opacity = '0'; // 페이드 아웃 효과
+
+                            // 페이드 아웃 효과가 끝난 후에 완전히 숨김 처리
+                            setTimeout(function () {
+                                loading_icon.style.display = 'none';
+                            }, 0); // 숨김
+                        }                    };
+                }
+            };
+            xhttp.open("GET", "../common_widget.html", true);
+            // 공통 요소가 있는 파일 불러오기
+            xhttp.send();
+        }
+
+        // 페이지가 로드될 때 공통 위젯을 로드합니다.
+        window.onload = loadCommonWidget;
+    </script>
+
+
+</body>
+
+</html>

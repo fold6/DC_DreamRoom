@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Study With Dreamcatcher🔮</title>
+
+     <!-- sns 공유 -->
+     <meta property="og:site_name" content="Study With Dreamcatcher">
+     <meta property="og:title" content="Study With Dreamcatcher">
+     <meta property="og:description" content="드림캐쳐와 함께 공부하기 (Study With Dreamcatcher)">
+     <meta property="og:type" content="website">
+     <!-- 만들어야 함 -->
+     <!-- 만들어야 함 -->
+     <!-- 만들어야 함 -->
+     <meta property="og:image" content="img/sns_thum.png">
+
+     <!-- 파비콘 -->
+     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+     <!-- CSS  -->
+     <link href="css/font.css" rel="stylesheet" />
+     <link href="css/common.css?ver=0916" rel="stylesheet" />
+     <link href="css/reset.css" rel="stylesheet" />
+
+     <!-- Font awesome icon  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          referrerpolicy="no-referrer" />
+
+
+     <!-- 구글 애널리틱스 넣기  -->
+     <!-- 구글 애널리틱스 넣기  -->
+     <!-- 구글 애널리틱스 넣기  -->
+     <!-- Google tag (gtag.js) -->
+
+
+</head>
+<!-- 
+ |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
+ 💜Todo: 사이드 메뉴 공통 부분 한 파일로 묶어서 include 하기?
+
+  시도1. 첫페이지 모든영상 저화질로 함 <응 렉걸려
+  시도 2. 첫페이지 모든 영상 10분으로 컷함 240213 (올멤버 페이지에서 한번에 가져올때 너무 렉걸림...)  < 응 렉걸려
+  (유튜브 영상 가져오는게 더 렉걸리는거같기도..<카페 공용 와파 풀상태로 봣을때 이럼 ㅇㅇ)
+  시도 3. 반은 유튭 반은 저화질 10분컷영상ㄱㄱ
+
+   🚩 시도3-2. 1:30 짜리 webm 영상만들어서 동시재생 시도;; < 그나마 ㄱㅊ음!!  🚩
+  !!! 해야할 일: 이 시도 까진 괜찮은데 어찌됐건, 플레이 바 움직이면 렉거리므로,
+  index.html에서만!! 플레이바 못움직이게 어떠한 판을 깔거나 해야함 !!!
+
+  ###########위의 시도 3-2까지 해봄========
+   최종 시도4(안하고 싶음 ㅠㅠ). 결론 = 
+  올멤 페이지 에서는 30분컷 단 하나의 영상으로 합쳐서 가져오고, <반응형으로 3개정도?
+  개인 페이지 에서는 풀버전 유튭 영상 1개 가져옴 ㅠㅠㅠㅠㅠ
+  <근데 이러면; 내 캠 레이아웃을 어캐하지? 플롯으로 해야하나 싶기도함
+  
+✅✅✅✅✅ History ✅✅✅✅✅
+⚠️⚠️⚠️ 전체멤있는 index.html에 절대 common 으로 사이드랑 넣는 파일 연결하지말기 
+(sub에서만 사용해야함, 경로 전부다 바꾸기 어려움)⚠️⚠️⚠️
+
+  - 240211 : 최초로 NAS에 올림 
+ - (마지막 기록 -🚩 시도3-2 webm 으로 영상 용량 최적화테스트중...)
+ - 메타 태그 써서 헤더넣은거 확실히 안함ㅇㅇ 
+
+- 240901 :
+  -- 완료:
+  1. mobile 반응형으로 ui 수정 < 세로축 , 버튼 ui 사이즈 수정하는 중
+  (시계나 다른 ui 글자 사이즈 수정중 < 아이폰에서 봤을때 작음(폴드 접힌거까지 신경쓰진말고
+  데스크탑 서포트주의라는 식으로 적기)) 
+   - 글자랑 서랍버튼 등 모바일용으로 수정완료!
+   - 가로로 돌렸을때 틀어지는거 수정완료!
+
+- 240904 : 
+ 🧨이슈해결: 위젯 드레그해서 가로세로 영역밖으로 나가면 그만큼 늘어남 (containment 로 해결)
+   +++ 브금 바 없앰
+- 240906-7 :       
+ -🧨이슈해결 :  플리 부분 아이폰이랑 갤럭시 둘다 호환되게 만들기 
+ (높이값다르게 책정돼서 flex랑 top% + line-height 로 해결)
+ +++ 모바일일 경우 상단 타이틀 중앙정렬
+
+ - 240907 : 
+ - 가져오기 테스트 중 (다른건 되는데 하단 드레그박스 스크립트안됨ㄷ)
+
+ -240910 : sub페이지 공통요소 가져오고 js연결까지 끝
+ (배경화면 blob 쓸지말지 결정필요)
+
+  -240911 :
+  - 나스 sub페이지 연결안되는거 수정
+  - 반응형 css들 수정 (blob안쓰고 이미지 만듦)
+
+  -240912 : 
+  - 내 캠 아무것도 없을때 디폴트 아이콘 및 카메라 동작체크
+
+-240913 :
+ -🧨이슈해결 :sub페이지 에서 다음 노래 넘기고 나면 정지가 안되는 이슈 해결 
+ -🧨이슈해결: bgm은 처음 접속시 무조건 눌러서 상호작용 후에 작동되게 수정 (정책문제)
+ - sub페이지 다 채워넣음
+ - 파비콘 제작 완료 
+
+ -240914 :
+ -- 🧨이슈해결중: 영상 최적화 
+ -- 해야할일 :  2분씩의 영상으로 다시 한번 시도... < 성공.. 했으니까 실제 영상 컷해서 올려야함
+    ++ 영상 로딩될때 ? poster인가? 써서 썸네일 이미지 나오게 해야함
+
+ -240915 :
+- sub페이지 연결 완료 (영상, 로딩이미지)
+- 로딩이미지 제작 (원래 gif로 만들었다가 테두리, 로딩오래걸림 이슈때문에 css로 구현함! )
+  돔 로드 전부다 되면! 로딩 바 없어짐 적용완료
+
+
+  -240916:
+  - 비디오 로딩 대기 이미지 show/hide js추가
+  - 설명 슬라이드 기초 토대 (안에 그래픽은 만들어야함)
+
+  -240917:
+  - 영상 만들기...
+  - 기록이 너무.. 들쑥날쑥 한데 깃에 어떻게든 기록해야 할듯 (사이트 명 : DreamRoom 으로 정함)
+  
+  -🧨이슈 해결중 : ..  index 최초로들어갈때 로딩 너무 오래걸리므로 2분짜리 4000kb이하 영상으로 대체
+
+
+
+========================================
+- 해야될 부분 : 설명버튼 설명 이미지 슬라이드 
+- 해야될 부분 : 커서연결 제대로 하기
+- 해야될 부분 : sns 공유 이미지 만들기 
+- 해야될 부분 : 애널리틱스 연결하기
+ -🧨이슈 : 30분짜리 영상 내 시놀로지에 놔야할지도.. 깃에두면 로딩안될지도 모름
+
+ |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
+ \ (•◡•) / Update MEMO
+ -->
+
+<style>
+     .side_all {
+          box-shadow: 0px 0px 10px #8749F2;
+     }
+
+     /* 메인 비디오 비디오 터치 X + 컨트롤 숨기기 */
+     video {
+          pointer-events: none;
+     }
+
+     video::-webkit-media-controls {
+          display: none !important;
+     }
+
+     video::-moz-media-controls {
+          display: none !important;
+     }
+
+     video::-ms-media-controls {
+          display: none !important;
+     }
+</style>
+
+<body>
+     <!-- 로딩 -->
+     <div class="loading_wrap" id="loading_icon">
+          <div class="loading_img">
+               <img src="img/loading_icon.png">
+          </div>
+     </div>
+
+     <header>
+          <div class="header_in">
+               <p class="title">Insomnia's Room</p>
+          </div>
+          <div class="fullpage" id="fullscreenBtn"><i class="fas fa-expand"></i></div>
+     </header>
+
+
+
+     <!-- 시계 위젯 -->
+     <div class="draggable_clock">
+          <i class="fas far fa-grip-lines"></i>
+          <div class="clock_widget">
+               <div class="time_hms" id="hour_min_sec"></div>
+               <div class="time_pmam" id="pmam"></div>
+          </div>
+
+     </div>
+
+     <!-- BGM 위젯 -->
+     <div class="draggable_bgm">
+          <i class="fas far fa-grip-lines"></i>
+          <div class="bgm_widget">
+               <div class="bgm-player">
+                    <div class="player_info">
+                         <p class="bgm_name " id="current-track">
+                              <!-- 첫 bgm이름 -->
+                         </p>
+                         <div class="controls">
+                              <button id="prev-button"><i class="fas fa-backward"></i></button>
+                              <button id="play-pause-button"><i class="fas fa-play"></i></button>
+                              <button id="next-button"><i class="fas fa-forward"></i></button>
+                         </div>
+                    </div>
+               </div>
+
+               <audio id="bgm-audio" controls loop>
+                    <source src="bgm/DC_fire.mp3" type="audio/mp3">
+               </audio>
+          </div>
+     </div>
+
+
+     <main>
+          <div class="sidemenu">
+               <ul class="sideblock">
+                    <li class="side_all" onclick="location.href='index.html'">
+                         <div class="side_mem_img">
+                              <img src="img/DC_logo.png">
+                         </div>
+                         <!-- 선택된 상태면 speak_act 보임-->
+                         <div class="speak_act" style="display: block!important;">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">드림캐쳐</p>
+                    </li>
+                    <li class="side_jiu" onclick="location.href='sub/with_jiu_page.html'">
+                         <div class="side_mem_img">
+                              <img src="img/지유_profile.jpg">
+                         </div>
+                         <div class="speak_act">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">지유</p>
+                    </li>
+                    <li class="side_sua" onclick="location.href='sub/with_sua_page.html'">
+                         <div class="side_mem_img">
+                              <img src="img/수아_profile.jpg">
+                         </div>
+                         <div class="speak_act">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">수아</p>
+                    </li>
+                    <li class="side_siyeon" onclick="location.href='sub/with_siyeon_page.html'">
+                         <div class="side_mem_img">
+                              <img src="img/시연_profile.jpg">
+                         </div>
+                         <div class="speak_act">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">시연</p>
+                    </li>
+                    <li class="side_handong" onclick="location.href='sub/with_handong_page.html'">
+                         <div class="side_mem_img">
+                              <img src="img/한동_profile.jpg">
+                         </div>
+                         <div class="speak_act">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">한동</p>
+                    </li>
+                    <li class="side_yoohyeon" onclick="location.href='sub/with_yoohyeon_page.html'">
+                         <div class="side_mem_img">
+                              <img src="img/유현_profile.jpg">
+                         </div>
+                         <div class="speak_act">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">유현</p>
+                    </li>
+                    <li class="side_dami" onclick="location.href='sub/with_dami_page.html'">
+                         <div class="side_mem_img">
+                              <img src="img/다미_profile.jpg">
+                         </div>
+                         <div class="speak_act">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">다미</p>
+                    </li>
+                    <li class="side_gahyun" onclick="location.href='sub/with_gahyun_page.html'">
+                         <div class="side_mem_img">
+                              <img src="img/가현_profile.jpg">
+                         </div>
+                         <div class="speak_act">
+                              <i class="fas fa-microphone fa-xs"></i>
+                         </div>
+                         <p class="side_mem_name">가현</p>
+                    </li>
+               </ul>
+          </div>
+
+          <!-- 화상 CAM -->
+          <div class="cam_wrap">
+               <ul class="cam_all">
+                    <li class="cam_me">
+                         <!-- 대기/로드중이미지 -->
+                         <span class="waiting_text">
+                              Please allow access to the camera.<br>
+                              (카메라 권한을 허용해주세요)
+                         </span>
+                         <video muted playsinline autoplay="true" id="videoElement">
+                         </video>
+                         <div class="mute_mic">
+                              <img src="img/mic_mute.png">
+                         </div>
+                    </li>
+
+                    <li class="cam_jiu">
+                         <div class="video-container">
+                              <!-- 로컬 2분 영상 -->
+                              <video controls autoplay muted loop playsinline preload="none">
+                                   <source src="vid/2분.mp4" type="video/mp4" />
+                              </video>
+
+                              <div class="wating_img">
+                                   <img class="cam_back_img" src="img/지유_profile.jpg">
+                                   <div class="inner_img"><img src="img/지유_profile.jpg"></div>
+                              </div>
+
+                         </div>
+                         <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
+                         <p class="mem_cam_name">🐰지유</p>
+                    </li>
+
+                    <li class="cam_sua">
+                         <div class="video-container">
+                              <!-- 로컬 2분 영상 -->
+                              <video controls autoplay muted loop playsinline preload="none">
+                                   <source src="vid/2분.mp4" type="video/mp4" />
+                              </video>
+
+                              <div class="wating_img">
+                                   <img class="cam_back_img" src="img/수아_profile.jpg">
+                                   <div class="inner_img"><img src="img/수아_profile.jpg"></div>
+                              </div>
+                         </div>
+                         <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
+                         <p class="mem_cam_name">🐥수아</p>
+                    </li>
+
+                    <li class="cam_siyeon">
+                         <div class="video-container">
+                              <!-- 로컬 2분 영상 -->
+                              <video controls autoplay muted loop playsinline preload="none">
+                                   <source src="vid/2분.mp4" type="video/mp4" />
+                              </video>
+
+                              <div class="wating_img">
+                                   <img class="cam_back_img" src="img/시연_profile.jpg">
+                                   <div class="inner_img"><img src="img/시연_profile.jpg"></div>
+                              </div>
+                         </div>
+                         <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
+                         <p class="mem_cam_name">🐺시연</p>
+                    </li>
+
+                    <li class="cam_handong">
+                         <div class="video-container">
+
+                              <!-- 로컬 2분 영상 -->
+                              <video controls autoplay muted loop playsinline preload="none">
+                                   <source src="vid/2분.mp4" type="video/mp4" />
+                              </video>
+
+                              <div class="wating_img">
+                                   <img class="cam_back_img" src="img/한동_profile.jpg">
+                                   <div class="inner_img"><img src="img/한동_profile.jpg"></div>
+                              </div>
+                         </div>
+                         <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
+                         <p class="mem_cam_name">🐱한동</p>
+                    </li>
+
+                    <li class="cam_yoohyeon">
+                         <div class="video-container">
+                              <!-- 로컬 2분 영상 -->
+                              <video controls autoplay muted loop playsinline preload="none">
+                                   <source src="vid/2분.mp4" type="video/mp4" />
+                              </video>
+                              <div class="wating_img">
+                                   <img class="cam_back_img" src="img/유현_profile.jpg">
+                                   <div class="inner_img"><img src="img/유현_profile.jpg"></div>
+                              </div>
+
+                         </div>
+                         <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
+                         <p class="mem_cam_name">🐶유현</p>
+                    </li>
+
+                    <li class="cam_dami">
+                         <div class="video-container">
+                              <!-- 로컬 2분 영상 -->
+                              <video controls autoplay muted loop playsinline preload="none">
+                                   <source src="vid/2분.mp4" type="video/mp4" />
+                              </video>
+                              <div class="wating_img">
+                                   <img class="cam_back_img" src="img/다미_profile.jpg">
+                                   <div class="inner_img"><img src="img/다미_profile.jpg"></div>
+                              </div>
+
+                         </div>
+                         <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
+                         <p class="mem_cam_name">🐼다미</p>
+                    </li>
+
+                    <li class="cam_gahyun">
+                         <div class="video-container">
+                              <!-- 로컬 2분 영상 -->
+                              <video controls autoplay muted loop playsinline preload="none">
+                                   <source src="vid/2분.mp4" type="video/mp4" />
+                              </video>
+                              <div class="wating_img">
+                                   <img class="cam_back_img" src="img/가현_profile.jpg">
+                                   <div class="inner_img"><img src="img/가현_profile.jpg"></div>
+                              </div>
+                         </div>
+                         <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
+                         <p class="mem_cam_name">🦊가현</p>
+                    </li>
+
+               </ul>
+          </div>
+
+     </main>
+     <div class="drag_box">
+          <div class="box_arrow_btn"><img class="box_arrow" src="img/left_arrow.png"></div>
+          <ul class="drag_box_inner_btn">
+               <li class="box_clock"><img class="widget_active_clock" src="img/clock.png"></li>
+               <li class="box_playlist"><img class="widget_active_bgm" src="img/playlist.png"></li>
+               <li class="box_me"><img class="widget_active_me" src="img/me.png"></li>
+          </ul>
+     </div>
+
+
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+     <!-- jquery-ui-touch-punch -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js">
+     </script>
+
+     <!-- 공통 JS -->
+     <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

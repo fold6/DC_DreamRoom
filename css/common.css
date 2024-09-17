@@ -1,0 +1,1537 @@
+@charset "utf-8";
+
+/* 로딩 */
+.loading_wrap {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(ellipse at bottom, rgb(20, 14, 81), rgb(10, 10, 26));
+    position: fixed;
+    z-index: 9999999999999;
+}
+
+.loading_img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+    width: 110px;
+    animation-name: loading_ef;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.loading_img img {
+    width: 100%;
+}
+
+@keyframes loading_ef {
+    0% {
+        opacity: .2;
+        filter: drop-shadow(0px 0px 1px #503ba8);
+    }
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0px 0px 6px #785bee);
+    }
+}
+
+
+/* ---------- Cam ---------- */
+/* ---------- Cam ---------- */
+/* ---------- Cam ---------- */
+
+.cam_wrap {
+    /* background-color: yellow; */
+    /* width: 90%; */
+    width: calc(100% - 100px);
+    padding: 0 20px;
+    height: 100%;
+    margin-top: 140px;
+    margin-left: 55px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* 전체멤일때 */
+.cam_all {
+    /* 반응형으로 만들때 이부분 수정 */
+    display: grid;
+    /* 4개의 열을 균등한 너비로 설정 */
+    grid-template-columns: repeat(4, 1fr);
+    /* 박스들 사이의 간격 설정 */
+    gap: 20px 20px;
+    padding-bottom: 50px;
+}
+
+/* 전체멤 캠 */
+/* .cam_all li video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* 1:1 멤일때 */
+.cam_one_by_one {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 20px;
+    /* padding-bottom: 300px; */
+}
+
+/* 1:1 멤일때 길이수정 */
+.cam_one_by_one li {
+    height: 50vh;
+}
+
+/* 내 캠 */
+/* 내 이미지 기본 보정일때 */
+#videoElement {
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    /* 내 캠 밝기주기 */
+    filter: brightness(110%);
+}
+
+/* 내 캠 default */
+.cam_me {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background-color: #00000071; */
+    background-color: #000000ad;
+    background-image: url('../img/me_default.png');
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center 44%;
+}
+
+.waiting_text {
+    color: #ffffff8c;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-weight: 200;
+    text-align: left;
+}
+
+/* 멤버캠 블러배경 */
+.cam_back_img {
+    filter: blur(6px);
+    width: 100%;
+    height: 100%;
+}
+
+.wating_img {
+    height: 100%;
+}
+
+/* 멤버캠 */
+.cam_all li {
+    height: 35vh;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    display: block;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0px 0px 10px #000000a6;
+}
+
+/* 멤버캠 유튜브 영상 */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* 높이를 100%로 설정하여 부모 요소 크기에 맞게 확대합니다. */
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 커버 모드로 설정합니다. */
+}
+
+/* 블러배경 꽉차게 */
+.cam_all li .cam_back_img,
+.inner_img img {
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    display: inline-block;
+}
+
+.inner_img {
+    filter: drop-shadow(0px 0px 1px #33333346);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 멤버캠 이름 */
+.mem_cam_name {
+    width: 68px;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 4px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    background-color: #00000088;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #000000;
+}
+
+
+/* 프레임 가져올때 */
+.error_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.error_img img {
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* 뮤트마이크 */
+.mute_mic {
+    width: 30px;
+    height: 30px;
+    background-color: #00000088;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #000000;
+}
+
+.mem_mute_mic {
+    /* display: none; */
+}
+
+/* 뮤트마이크 */
+.mute_mic img {
+    width: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+
+
+
+/* ================================================ */
+
+
+
+
+html {
+    /* height: 100%; */
+    /* background-color: #090a0f; */
+    background: url('../img/bg.jpg?ver=2ewdw2')center center / cover;
+    height: 100vh;
+}
+
+
+
+
+/* ---------- 위젯 ---------- */
+/* ---------- 위젯 ---------- */
+/* ---------- 위젯 ---------- */
+
+/* ---------- 시계 위젯 ---------- */
+
+
+/* 시계위젯 위치 */
+.draggable_clock {
+    box-shadow: 1px 1px 3px #00000082;
+    width: 280px;
+    height: 85px;
+    line-height: 85px;
+    background-color: #0000004f;
+    text-align: center;
+    cursor: move;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    border-radius: 10px;
+    z-index: 500;
+    /* display: none; */
+}
+
+.draggable_clock i {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #ffffff5c;
+}
+
+.clock_widget {
+    display: inline-block;
+    font-size: 4rem;
+    /* font-family: ; */
+    background-color: #1a0197;
+
+    /* width: calc(100% - 50px); */
+    /* margin: 0 40px; */
+
+}
+
+.clock_widget div {
+    display: inline-block;
+    color: #fff;
+    font-size: 4rem;
+}
+
+/* 시분초 */
+.time_hms {
+    position: absolute;
+    left: 10%;
+    top: 0;
+}
+
+/* 오후오전 */
+.time_pmam {
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+
+
+/* ---------- BGM 위젯 ---------- */
+/* BGM위젯 위치 */
+.draggable_bgm {
+    box-shadow: 1px 1px 3px #00000082;
+    width: 240px;
+    height: 85px;
+    /* background-color: rgb(68 0 177 / 44%)!important; */
+    /* test */
+    background-color: #0000004f;
+    text-align: center;
+    cursor: move;
+    position: absolute;
+    left: 75px;
+    top: 40px;
+    border-radius: 10px;
+    z-index: 500;
+}
+
+.draggable_bgm .fa-grip-lines {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #ffffff5c;
+}
+
+.bgm-player {
+    text-align: center;
+    display: inline-block;
+    background-color: #150039;
+}
+
+
+
+/* 이전 다음 등 버튼 */
+.controls button i {
+    font-size: 1rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    /* align-items: space-evenly; */
+
+}
+
+.blur_filter {
+    filter: blur(3px);
+}
+
+.controls button {
+    display: inline-block;
+    color: #fff;
+    padding: 4px 7px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.player_info {
+    position: absolute;
+    top: 24% !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* line-height 없어서, IOS에서 높이값 못갖고 잘려보임*/
+    /* line-height: 1; */
+    line-height: 1.3;
+}
+
+
+.bgm_name {
+    /* display: block; */
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+
+/* none으로 살려놔야 타임바 보임 */
+.bgm_time {
+    display: none;
+}
+
+#bgm-audio {
+    display: none;
+}
+
+
+
+
+/* 브금 로딩 */
+
+/* .loading_cir {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.loading_cir i {
+    font-size: 2rem;
+    color: #fff;
+    display: inline-block;
+    animation-name: loading_circle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+    width: -7px;
+
+
+}
+
+@keyframes loading_circle {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+
+ */
+
+
+
+/* 
+
+
+#hideBtn {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+}
+
+#hideBtn {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- 헤더 ---------- */
+header {
+    height: 33px;
+    line-height: 33px;
+    position: fixed;
+    z-index: 999999999;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.671);
+    width: calc(100% - 50px);
+    left: 65px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-color: #0000008a;
+}
+
+.header_in {
+    width: 100%;
+    text-align: center;
+}
+
+/* 방 제목 */
+.title {
+    color: #f1f1f1;
+    font-size: 1.6rem;
+    /* font-weight: 400; */
+    padding-right: 20px;
+}
+
+/* 전체화면 */
+header .fas {
+    color: #f1f1f1;
+    font-size: 13px;
+    position: fixed;
+    top: 9px;
+    right: 10px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- 멤버선택 sidemenu  ---------- */
+/* ---------- 멤버선택 sidemenu  ---------- */
+/* ---------- 멤버선택 sidemenu  ---------- */
+.sidemenu {
+    position: fixed;
+    z-index: 5000;
+    width: 65px;
+    height: 100vh;
+    background-color: #0000008a;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.671);
+    overflow-y: auto;
+}
+
+.sideblock {
+    margin-top: 20px;
+    width: 100%;
+    /* background-color: #f1f1f1; */
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.sideblock li {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #661BAC;
+    margin-top: 20px;
+}
+
+.sideblock li:last-child {
+    margin-top: 20px;
+}
+
+/* 드림캐쳐 전체 로고*/
+.sideblock .side_all .side_mem_img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    object-position: initial;
+    object-fit: initial;
+    overflow: initial;
+}
+
+.sideblock .side_all .side_mem_img img {
+    filter: drop-shadow(1px 1px 6px #ff0000);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 30px; */
+}
+
+.side_all {
+    margin-bottom: 30px;
+}
+
+.side_all {
+    background: rgb(24, 0, 36);
+    background: linear-gradient(344deg, rgba(24, 0, 36, 1) 0%, rgba(84, 9, 121, 1) 35%, rgba(99, 0, 255, 1) 100%);
+}
+
+.sideblock .side_all .side_mem_name::after {
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: #f1f1f146;
+}
+
+
+
+/* 선택 돼있을시 */
+.active::before {
+    width: 10px;
+    height: 10px;
+}
+
+
+
+.side_mem_img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    object-position: center center;
+    object-fit: h;
+    /* background-color: #ededed; */
+    display: block;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease;
+}
+
+
+
+.side_mem_img img {
+    width: 100%;
+    object-position: center center;
+    object-fit: cover;
+    height: 100%;
+}
+
+.side_mem_name {
+    font-size: 1.3rem;
+    color: #ccc;
+    padding-top: 7px;
+    font-weight: 500;
+    /* display: none; */
+}
+
+/* 선택된 상태 기준점 */
+.sideblock li {
+    position: relative;
+}
+
+/* 선택된 상태 마이크 on */
+.speak_act {
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background-color: #666560;
+    background-color: #ee0047;
+    background-color: #8800c7;
+    background: rgb(83, 13, 166);
+    background: linear-gradient(90deg, rgba(83, 13, 166, 1) 0%, rgba(34, 19, 72, 1) 100%);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    /* box-shadow: 0px 0px 5px  rgb(83, 13, 166); */
+    /* 기본 none상태 - 해당 페이지임에 따라 block시킴*/
+    display: none;
+
+}
+
+.speak_act::after {
+    /* position: fixed; */
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 15px rgba(163, 88, 255, 0.993);
+    /* box-shadow: 0px 0px 10px rgb(255, 0, 0); */
+    animation: ripple 1.5s infinite;
+    position: static;
+    top: -10px;
+    border-radius: 50%;
+    z-index: -4;
+}
+
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(.8);
+        opacity: 1;
+    }
+
+    100% {
+        /* transform: scale(0); */
+        opacity: 0;
+    }
+}
+
+
+.speak_act i {
+    font-size: 1rem;
+    color: #fff;
+    /* padding: 4px; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 15px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    z-index: 20;
+}
+
+/* ---------- 배경 숨쉬는 Lavalamp ---------- */
+/* ---------- 배경 숨쉬는 Lavalamp ---------- */
+/* ---------- 배경 숨쉬는 Lavalamp ---------- */
+
+body {
+    background: transparent;
+}
+
+
+.main_lava_bg {
+    width: 100%;
+    height: 0;
+    /* background-color: rgba(240, 248, 255, 0.151); */
+}
+
+.lamp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+    z-index: -1;
+}
+
+.lava {
+    filter: url("#goo");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.blob {
+    border-radius: 50%;
+    background: #661BAC;
+
+    position: absolute;
+    /* 이거 잘건드리면 불꽃가능 */
+    filter: blur(100px);
+    box-shadow: #1a0197 0px 0px 2px 20px;
+}
+
+
+.blob.top {
+    border-radius: 50%;
+    width: 100%;
+    height: 4%;
+    top: -3%;
+    left: 0;
+
+}
+
+.blob.bottom {
+    border-radius: 50%;
+    width: 100%;
+    height: 4%;
+    bottom: -3%;
+    left: 0;
+}
+
+.blob:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    left: 35%;
+    bottom: -15%;
+
+    animation: wobble 4s ease-in-out alternate infinite, blob-one ease-in-out 13s infinite;
+}
+
+.blob:nth-child(2) {
+    width: 330px;
+    height: 330px;
+    right: 24%;
+    bottom: -65%;
+
+    animation: wobble 5s ease-in-out alternate infinite, blob-two ease-in-out 22s infinite;
+
+
+
+}
+
+.blob:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    bottom: -15%;
+    left: 34%;
+
+    animation: wobble 6s ease-in-out alternate infinite, blob-three ease-in-out 16s infinite;
+}
+
+.blob:nth-child(4) {
+    width: 235px;
+    height: 235px;
+    bottom: -19%;
+    left: 30%;
+
+    animation: wobble 7s ease-in-out alternate infinite, blob-four ease-in-out 12s infinite;
+}
+
+.blob:nth-child(4) {
+    width: 235px;
+    height: 235px;
+    bottom: -19%;
+    left: 30%;
+    animation: wobble 8s ease-in-out alternate infinite, blob-four ease-in-out 12s infinite;
+}
+
+.blob:nth-child(5) {
+    width: 55px;
+    height: 55px;
+    bottom: -25%;
+    left: 34%;
+
+    animation: wobble 9s ease-in-out alternate infinite, blob-five ease-in-out 32s infinite;
+}
+
+.blob:nth-child(6) {
+    width: 35px;
+    height: 35px;
+    bottom: -25%;
+    right: 34%;
+
+    animation: wobble 10s ease-in-out alternate infinite, blob-six ease-in-out 12s infinite;
+}
+
+.blob:nth-child(7) {
+    width: 435px;
+    height: 435px;
+    bottom: -85%;
+    right: 40%;
+
+    animation: wobble 11s ease-in-out alternate infinite, blob-seven ease-in-out 32s infinite;
+}
+
+@keyframes blob-one {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-700%);
+    }
+}
+
+@keyframes blob-two {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-420%);
+    }
+}
+
+@keyframes blob-three {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-305%);
+    }
+}
+
+@keyframes blob-four {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-605%);
+    }
+}
+
+@keyframes blob-five {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-700%);
+    }
+}
+
+@keyframes blob-six {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-700%);
+    }
+}
+
+@keyframes blob-seven {
+
+    0%,
+    100% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-300%);
+    }
+}
+
+
+@keyframes wobble {
+    50% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    }
+
+    100% {
+        border-radius: 38% 52% 75% 36% / 50% 40% 50% 60%;
+    }
+}
+
+
+
+
+
+
+/* ---------- drag_box ---------- */
+/* ---------- drag_box ---------- */
+/* ---------- drag_box ---------- */
+
+/* 버튼 눌렀을때 right -50px 상태로 전환 */
+.drag_box {
+    position: fixed;
+    bottom: 110px;
+    right: -315px;
+    width: 390px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #000000d9;
+    border-radius: 100px;
+    transition: right 0.5s ease;
+    z-index: 9;
+    /* 부드러운 모션을 위한 트랜지션 속성 */
+}
+
+/* 수직으로 정렬시 참고코드 */
+/*
+.drag_box_inner_btn {
+    display: flex;
+    flex-direction: column;  // 요소들을 수직으로 정렬합니다.
+    justify-content: center; // 요소들을 수직으로 중앙에 정렬합니다.
+    align-items: center;     // 요소들을 수평으로 중앙에 정렬합니다.
+}
+*/
+/* 서랍버튼 첫번째 화살표 */
+.box_arrow_btn {
+    position: absolute;
+    top: 4px;
+    left: 7px;
+}
+
+/* 서랍 버튼 */
+.drag_box_inner_btn {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-left: 70px;
+}
+
+.drag_box_inner_btn li {
+    /* display: inline-block; */
+    display: flex;
+}
+
+/* 화살표 속성 */
+.drag_box .box_arrow {
+    width: 20px;
+    padding: 22px;
+    height: 20px;
+    filter: drop-shadow(0px 0px 3px #ffffff);
+}
+
+.drag_box .box_arrow img {
+    width: 100%;
+}
+
+
+
+/* 위젯버튼 속성 */
+.drag_box_inner_btn li {
+    width: 40px;
+    padding: 7px;
+}
+
+.drag_box_inner_btn li img {
+    width: 100%;
+    filter: contrast(0);
+}
+
+
+/* 클릭된 위젯버튼에 active 추가 (광선,보라색) */
+
+/* 시계 */
+.widget_active_clock {
+    filter: drop-shadow(0px 0px 5px #3D00B2) contrast(1) !important;
+}
+
+
+/* 플리 */
+.widget_active_bgm {
+    filter: drop-shadow(0px 0px 5px #3D00B2) contrast(1) !important;
+}
+
+
+/* 나 */
+.widget_active_me {
+    filter: drop-shadow(0px 0px 5px #3D00B2) contrast(1) !important;
+}
+
+
+
+
+
+
+
+
+/* 1365 lap.ver */
+/* 1365 lap.ver */
+/* 1365 lap.ver */
+/* 1365 lap.ver */
+
+
+
+
+
+/* Tb.+Mo.ver */
+/* Tb.+Mo.ver */
+/* Tb.+Mo.ver */
+/* Tb.+Mo.ver */
+
+
+@media (max-width: 768px) {
+
+    /* 로딩 */
+    
+.loading_img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    width: 15%;
+    animation-name: loading_ef;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+    header {
+        height: 20px;
+        line-height: 20px;
+        position: fixed;
+        z-index: 999999999;
+        text-align: center;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.671);
+        width: calc(100% - 50px);
+        right: 0;
+        /* background-color: rgba(0, 0, 0, 0.3); */
+        background-color: #0000008a;
+    }
+
+    .title {
+        color: #f1f1f1;
+        font-size: .9rem;
+        padding-right: 60px;
+    }
+
+    header .fas {
+        color: #f1f1f1;
+        font-size: 9px;
+        position: fixed;
+        top: 5px;
+        right: 10px;
+        display: none;
+    }
+
+    /* 멤버캠 */
+    .cam_wrap {
+        /* background-color: yellow; */
+        /* width: 85%; */
+        height: 100%;
+        margin-left: 50px;
+        display: inline-block;
+        text-align: center;
+        margin-top: 105px;
+    }
+
+    /* 멤버그리드 */
+    .cam_all {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 20px;
+    }
+
+
+    /* 멤버캠 세로로 길게 */
+    .cam_one_by_one {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px 20px;
+        /* padding-bottom: 300px; */
+
+    }
+
+    .cam_one_by_one li {
+        height: 35vh;
+    }
+
+    .cam_all li {
+        height: 40vh;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+        display: block;
+        box-sizing: border-box;
+        transition: box-shadow 0.2s ease;
+        box-shadow: 0px 0px 10px #000000a6;
+    }
+
+    /* 위젯서랍 */
+    .drag_box .box_arrow {
+        width: 15px;
+        padding: 11px;
+        height: 15px;
+        filter: drop-shadow(0px 0px 3px #ffffff);
+    }
+
+    .drag_box {
+        position: fixed;
+        bottom: 10vh;
+        right: -265px;
+        width: 320px;
+        height: 45px;
+        line-height: 45px;
+        background-color: #000000d9;
+        border-radius: 100px;
+        transition: right 0.5s ease;
+    }
+
+    /* 위젯버튼 */
+    .drag_box_inner_btn {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin-left: 50px;
+    }
+
+    .drag_box_inner_btn li {
+        width: 22px;
+        padding: 7px;
+        margin-bottom: 3px;
+    }
+
+
+    /* float 위젯시계 */
+    .draggable_clock {
+        width: 195px;
+        height: 65px;
+        line-height: 65px;
+        background-color: #0000004f;
+        text-align: center;
+        cursor: move;
+        position: absolute;
+        right: 3.5%;
+        /* top: 4%; */
+        border-radius: 10px;
+        z-index: 500;
+        top: 30px;
+    }
+
+    .time_hms {
+        position: absolute;
+        left: 12%;
+        top: 0;
+    }
+
+    .time_pmam {
+        position: absolute;
+        right: 13%;
+        top: 0;
+    }
+
+    .clock_widget div {
+        display: inline-block;
+        color: #fff;
+        font-size: 2.7rem;
+    }
+
+    .fa-grip-lines {
+        font-size: 1.1rem;
+    }
+
+    /* 브금 위젯 */
+    .draggable_bgm {
+        box-shadow: 1px 1px 3px #00000082;
+        width: 150px;
+        height: 65px;
+        background-color: #0000004f;
+        text-align: center;
+        cursor: move;
+        position: absolute;
+        left: 75px;
+        top: 40px;
+        border-radius: 10px;
+        z-index: 500;
+        top: 30px;
+    }
+
+    .bgm_name {
+        /* display: block; */
+        color: #fff;
+        font-size: 1.3rem;
+    }
+
+    .controls button {
+        display: inline-block;
+        color: #fff;
+        padding: 2px 5px;
+        margin: 0 8px;
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+    }
+
+    .controls button i {
+        font-size: .8rem;
+    }
+
+    .player_info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    /* IOS 이슈로 top값 변경 */
+    /* 이후로 갤럭시에서 터치가 안되는 이슈.... */
+    .controls {
+        position: absolute;
+        width: 100%;
+        top: 85%;
+        gap: 10px;
+        /* z-index: 999999!important; */
+        /* margin-top: -4px; */
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* Mo.ver */
+/* Mo.ver */
+/* Mo.ver */
+/* Mo.ver */
+
+
+/* @media (max-width: 460px) { */
+/* 폴드 펼침 이하 사이즈 */
+@media (max-width: 674px) {
+
+    header {
+        height: 20px;
+        line-height: 21px;
+        position: fixed;
+        z-index: 999999999;
+        text-align: center;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.671);
+        width: calc(100% - 50px);
+        right: 0;
+        background-color: #0000008a;
+    }
+
+
+    /* 멤버캠 */
+    .cam_wrap {
+        height: 100%;
+        margin-left: 50px;
+        margin-top: 95px;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .cam_all li {
+        height: 160px;
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 20px;
+        display: block;
+        box-sizing: border-box;
+        transition: box-shadow 0.2s ease;
+    }
+
+    /* 멤버그리드 */
+    .cam_all {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px 10px;
+    }
+
+    .cam_one_by_one li {
+        height: 35vh;
+    }
+
+    .mute_mic {
+        width: 23px;
+        height: 23px;
+        background-color: #00000088;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px #000000;
+    }
+
+    .mute_mic img {
+        width: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mem_cam_name {
+        width: 50px;
+        height: 25px;
+        line-height: 25px;
+        padding-right: 4px;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        background-color: #00000088;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* =========== 위젯 =========== */
+
+    /* 위젯시계 */
+    .draggable_clock {
+        width: 130px;
+        height: 53px;
+        line-height: 55px;
+        background-color: #0000004f;
+        text-align: center;
+        cursor: move;
+        position: absolute;
+        right: 3.5%;
+        /* top: 4%; */
+        border-radius: 10px;
+        z-index: 500;
+    }
+
+    .clock_widget div {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.8rem;
+    }
+
+    .fa-grip-lines {
+        font-size: .8rem;
+    }
+
+
+    .time_hms {
+        position: absolute;
+        left: 12%;
+        top: 0;
+    }
+
+    .time_pmam {
+        position: absolute;
+        right: 13%;
+        top: 0;
+    }
+
+
+
+    /* 브금 위젯 */
+    .draggable_bgm {
+        box-shadow: 1px 1px 3px #00000082;
+        width: 150px;
+        height: 53px;
+        background-color: #0000004f;
+        text-align: center;
+        cursor: move;
+        position: absolute;
+        left: 75px;
+        border-radius: 10px;
+        z-index: 500;
+    }
+
+    .bgm_name {
+        /* display: block; */
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .controls button {
+        display: inline-block;
+        color: #fff;
+        padding: 0 10px;
+        margin: 0;
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+    }
+
+    .controls button i {
+        font-size: .7rem;
+    }
+
+    /* .controls {
+        padding: 0;
+    } */
+
+    .player_info {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+
+}
+
+
+/* 가로모드 일시  */
+@media screen and (orientation: landscape) {
+    .mem_cam_name {
+        width: 50px;
+        height: 25px;
+        line-height: 25px;
+        padding-right: 4px;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        background-color: #00000088;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
+
+}
+
+/* 모바일 가로모드 일시 */
+@media (max-width: 900px) and (orientation: landscape) {
+
+    header .fas {
+        display: none;
+    }
+
+}

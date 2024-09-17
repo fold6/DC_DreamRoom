@@ -1,0 +1,130 @@
+ 
+ <!-- 헤더 타이틀 -->
+ <header>
+      <div class="header_in">
+           <p class="title">Insomnia's Room</p>
+      </div>
+      <div class="fullpage" id="fullscreenBtn"><i class="fas fa-expand"></i></div>
+ </header>
+
+ <!-- 시계 위젯 -->
+
+ <div class="draggable_clock">
+      <i class="fas far fa-grip-lines"></i>
+      <div class="clock_widget">
+           <div class="time_hms" id="hour_min_sec"></div>
+           <div class="time_pmam" id="pmam"></div>
+      </div>
+
+ </div>
+
+ <!-- BGM 위젯 -->
+ <div class="draggable_bgm">
+      <i class="fas far fa-grip-lines"></i>
+      <div class="bgm_widget">
+           <div class="bgm-player">
+                <div class="player_info">
+                     <p class="bgm_name " id="current-track"></p>
+                     <div class="controls ">
+                          <button id="prev-button"><i class="fas fa-backward"></i></button>
+                          <button id="play-pause-button"><i class="fas fa-play"></i></button>
+                          <button id="next-button"><i class="fas fa-forward"></i></button>
+                     </div>
+                </div>
+           </div>
+
+           <audio id="bgm-audio" controls loop>
+                <source src="../bgm/DC_fire.mp3" type="audio/mp3">
+           </audio>
+      </div>
+ </div>
+
+ <!-- 드레그박스 -->
+ <div class="drag_box">
+      <div class="box_arrow_btn"><img class="box_arrow" src="../img/left_arrow.png"></div>
+      <ul class="drag_box_inner_btn">
+           <li class="box_clock"><img class="widget_active_clock" src="../img/clock.png"></li>
+           <li class="box_playlist"><img class="widget_active_bgm" src="../img/playlist.png"></li>
+           <li class="box_me"><img class="widget_active_me" src="../img/me.png"></li>
+      </ul>
+ </div>
+
+
+ <!-- main (멤버사이드 개별 들어가는 부분) -->
+ <div class="sidemenu">
+      <ul class="sideblock">
+           <li class="side_all" onclick="location.href='../index.html'">
+                <div class="side_mem_img">
+                     <img src="../img/DC_logo.png">
+                </div>
+                <!-- 선택된 상태면 speak_act 보임-->
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">드림캐쳐</p>
+           </li>
+           <li class="side_jiu" onclick="location.href='with_jiu_page.html'">
+                <div class="side_mem_img">
+                     <img src="../img/지유_profile.jpg">
+                </div>
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">지유</p>
+           </li>
+           <li class="side_sua" onclick="location.href='with_sua_page.html'">
+                <div class="side_mem_img">
+                     <img src="../img/수아_profile.jpg">
+                </div>
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">수아</p>
+           </li>
+           <li class="side_siyeon" onclick="location.href='with_siyeon_page.html'">
+                <div class="side_mem_img">
+                     <img src="../img/시연_profile.jpg">
+                </div>
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">시연</p>
+           </li>
+           <li class="side_handong" onclick="location.href='with_handong_page.html'">
+                <div class="side_mem_img">
+                     <img src="../img/한동_profile.jpg">
+                </div>
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">한동</p>
+           </li>
+           <li class="side_yoohyeon" onclick="location.href='with_yoohyeon_page.html'">
+                <div class="side_mem_img">
+                     <img src="../img/유현_profile.jpg">
+                </div>
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">유현</p>
+           </li>
+           <li class="side_dami" onclick="location.href='with_dami_page.html'">
+                <div class="side_mem_img">
+                     <img src="../img/다미_profile.jpg">
+                </div>
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">다미</p>
+           </li>
+           <li class="side_gahyun" onclick="location.href='with_gahyun_page.html'">
+                <div class="side_mem_img">
+                     <img src="../img/가현_profile.jpg">
+                </div>
+                <div class="speak_act">
+                     <i class="fas fa-microphone fa-xs"></i>
+                </div>
+                <p class="side_mem_name">가현</p>
+           </li>
+      </ul>
+ </div>

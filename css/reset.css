@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 드캐커서:기본 < 기본만 html로 처리하고 나머지는 JS로 처리함 */
+html {
+     cursor: url('/img/default.png'), default;
+
+}
+
+
+* {
+     margin: 0;
+     padding: 0;
+}
+
+* {
+     -webkit-tap-highlight-color: transparent;
+}
+
+/* 스크롤막대지우기 */
+
+*::-webkit-scrollbar {
+     width: 0 !important;
+}
+
+
+* {
+     font-size: 1.7rem;
+}
+
+.ytp-chrome-top {
+     z-index: 0 !important;
+}
+
+.ytp-title-text {
+     display: none !important;
+}
+
+html,
+body {
+     font-size: 62.5%;
+}
+
+li {
+     list-style: none;
+}
+
+a {
+     display: block;
+     color: #333;
+     text-decoration: none;
+     letter-spacing: -0.025rem;
+}
+
+p {
+     letter-spacing: -0.025rem;
+     color: #333;
+}
+
+li {
+     color: #333;
+}
+
+.clearfix::after {
+     content: '';
+     display: block;
+     clear: both;
+}
+
+img {
+     border: 0;
+}

@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+.cam_all li {
+    height: 70vh;
+}
+
+
+
+
+/* 1365 lap.ver */
+@media (max-width: 1365px) {
+    .cam_all li {
+        height: 50vh;
+    }
+
+}
+
+/* Tb.+Mo.ver */
+@media (max-width: 768px) {
+
+    /* 멤버그리드 */
+    .cam_all {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px 20px;
+    }
+
+    .cam_all li {
+        height: 35vh;
+    }
+
+}
+
+/* 가로모드 */
+@media screen and (orientation: landscape) {
+    .cam_all {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cam_all li {
+        height: 50vh;
+    }
+
+    /* 굳이 가로모드 글자크기 수정안함 */
+    /* 
+    .draggable_clock {
+        width: 130px;
+        height: 53px;
+        line-height: 55px;
+        background-color: #0000004f;
+        text-align: center;
+        cursor: move;
+        position: absolute;
+        right: 3.5%;
+        border-radius: 10px;
+        z-index: 500;
+    }
+
+    .clock_widget div {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.8rem;
+    }
+
+    .fa-grip-lines {
+        font-size: .8rem;
+    }
+
+
+    .time_hms {
+        position: absolute;
+        left: 12%;
+        top: 0;
+    }
+
+    .time_pmam {
+        position: absolute;
+        right: 13%;
+        top: 0;
+    }
+
+    .draggable_bgm {
+        box-shadow: 1px 1px 3px #00000082;
+        width: 150px;
+        height: 53px;
+        background-color: #0000004f;
+        text-align: center;
+        cursor: move;
+        position: absolute;
+        left: 75px;
+        top: 40px;
+        border-radius: 10px;
+        z-index: 500;
+    }
+    .bgm_name {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .controls button {
+        display: inline-block;
+        color: #fff;
+        padding: 0;
+        margin: 0 8px;
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+    }
+    .controls button i {
+        font-size: .7rem;
+    }
+  
+    .player_info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    } */
+}
