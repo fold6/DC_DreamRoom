@@ -20,7 +20,7 @@
 
     <!-- CSS  -->
     <link href="../css/font.css" rel="stylesheet" />
-    <link href="../css/common.css?ver=091515" rel="stylesheet" />
+    <link href="../css/common.css?ver=09152312315" rel="stylesheet" />
     <link href="../css/reset.css?ver=0907" rel="stylesheet" />
     <link href="../css/sub_one_by_one.css?ver=0902237" rel="stylesheet" />
 
@@ -77,14 +77,25 @@
 
                 <li class="cam_dami">
                     <div class="video-container">
-                        <div class="wating_img">
-                            <img class="cam_back_img" src="../img/다미_profile.jpg">
-                            <div class="inner_img"><img src="../img/다미_profile.jpg"></div>
-                        </div>
-                        <!-- 로컬 30분짜리 영상 X 7 TEST  -->
-                        <video controls autoplay muted loop playsinline>
-                            <source src="../vid/swdc_dami.mp4" type="video/mp4" />
+                        <video controls autoplay muted loop playsinline preload="auto" poster="../img/bg.jpg">
+                            <!-- <source src="../vid/swdc_dami2.mp4?ver=0917" type="video/mp4" /> -->
+                            <!-- 원본 -->
+
+                            
+                            <!-- <source src="https://hesper3dm.synology.me/sub/DC_Study_with_dreamcatcher/vid/swdc_jiu2.mp4?ver=0917" type="video/mp4" /> -->
+                            <!-- 시놀로지 url로 영상가져오기 테스트 : 성공 < 그런데 이러면 시놀에 의존하게 돼서 안댐.. 유튜브로 해야함....-->
+
+
                         </video>
+                        
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/sO-p-wMr2MA&ab_?autoplay=1&mute=1&amp;playlist=sO-p-wMr2MA&ab_&amp;loop=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                            
+                            <!-- 유튜브로 가져오기.. < 이러면 초반에 컨트롤 ui 가 다 나옴...훔... 영상 언제 잘릴지도 모름.. 애초에 되는 영상인가? -->
+
                     </div>
                     <div class="mute_mic mem_mute_mic"><img src="../img/mic_mute.png"></div>
                     <p class="mem_cam_name">🐼다미</p>

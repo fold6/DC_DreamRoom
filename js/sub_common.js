@@ -471,21 +471,3 @@ $(document).ready(function () {
      });
 });
 
-
-// |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-//    비디오 로딩 후, 대기 이미지 없애기
-// |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
-//    \ (•◡•) /
-
-// 
-const videoContainers = document.querySelectorAll(".video-container");
-
-videoContainers.forEach(container => {
-     const video = container.querySelector("video");
-     const waitingImage = container.querySelector(".wating_img");
-
-     // 비디오가 로드되면 해당 비디오의 이미지 숨기기
-     video.addEventListener('canplay', function () {
-          waitingImage.style.display = 'none';
-     });
-});

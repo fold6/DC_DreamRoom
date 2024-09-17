@@ -44,8 +44,9 @@
 .cam_wrap {
     /* background-color: yellow; */
     /* width: 90%; */
-    width: calc(100% - 100px);
-    padding: 0 20px;
+    width: calc(100% - 90px);
+    /* padding: 0 20px; */
+    padding-left: 10px;
     height: 100%;
     margin-top: 140px;
     margin-left: 55px;
@@ -121,17 +122,6 @@
     text-align: left;
 }
 
-/* 멤버캠 블러배경 */
-.cam_back_img {
-    filter: blur(6px);
-    width: 100%;
-    height: 100%;
-}
-
-.wating_img {
-    height: 100%;
-}
-
 /* 멤버캠 */
 .cam_all li {
     height: 35vh;
@@ -167,25 +157,7 @@
     /* 커버 모드로 설정합니다. */
 }
 
-/* 블러배경 꽉차게 */
-.cam_all li .cam_back_img,
-.inner_img img {
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: center center;
-    height: 100%;
-    display: inline-block;
-}
 
-.inner_img {
-    filter: drop-shadow(0px 0px 1px #33333346);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-}
 
 
 /* 멤버캠 이름 */

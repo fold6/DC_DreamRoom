@@ -47,11 +47,11 @@
 
 <body>
     <!-- 로딩 -->
-     <div class="loading_wrap" id="loading_icon">
-          <div class="loading_img">
-                    <img src="../img/loading_icon.png">
-          </div>
-     </div>
+    <div class="loading_wrap" id="loading_icon">
+        <div class="loading_img">
+            <img src="../img/loading_icon.png">
+        </div>
+    </div>
 
     <!-- 공통 위젯이 들어갈 위치 -->
     <div id="common_widget"></div>
@@ -76,13 +76,8 @@
 
                 <li class="cam_yoohyeon">
                     <div class="video-container">
-                        <div class="wating_img">
-                            <img class="cam_back_img" src="../img/유현_profile.jpg">
-                            <div class="inner_img"><img src="../img/유현_profile.jpg"></div>
-                        </div>
-                        <!-- 로컬 30분짜리 영상 X 7 TEST  -->
-                         <video controls autoplay muted loop playsinline>
-                            <source src="../vid/swdc_yoohyeon.mp4" type="video/mp4" />
+                        <video controls autoplay muted loop playsinline preload="auto" poster="../img/bg.jpg">
+                            <source src="../vid/swdc_yoohyeon2.mp4?ver=0917" type="video/mp4" />
                         </video>
                     </div>
                     <div class="mute_mic mem_mute_mic"><img src="../img/mic_mute.png"></div>
@@ -127,7 +122,8 @@
                             setTimeout(function () {
                                 loading_icon.style.display = 'none';
                             }, 0); // 숨김
-                        }                    };
+                        }
+                    };
                 }
             };
             xhttp.open("GET", "../common_widget.html", true);

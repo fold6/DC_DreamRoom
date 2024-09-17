@@ -1,20 +1,4 @@
-          // |￣￣￣￣￣￣￣￣|
-          //     헤더고정
-          // |＿＿＿＿＿＿＿＿|
-          //    \ (•◡•) /
 
-          /*           $(function () {
-                         var headerTop = $('header').offset().top;
-                         $(window).scroll(function () {
-                              var scrollTop = $(window).scrollTop();
-                              if (headerTop < scrollTop) {
-                                   $('header').addClass('fixed').stop();
-                              } else {
-                                   $('header').removeClass('fixed');
-                              }
-                         });
-                    })
-           */
           // |￣￣￣￣￣￣￣￣|
           //     전체화면
           // |＿＿＿＿＿＿＿＿|
@@ -506,20 +490,6 @@
 
 
 
-          /* 플리버튼 갤럭시 test  */
-          // $(document).ready(function () {
-          //      $(".controls button").on("click touchend ", function () {
-          //           // 터치 또는 클릭 시 배경색 변경
-          //           $(this).css('background-color', 'red');
-          //      });
-
-          //      $(".player_info").on("click touchstart", function () {
-          //           $(this).css('background-color', 'green');
-          //      });
-          // });
-
-
-
           // 보통 이렇게 넣음 (체크필요)
           // 보통 이렇게 넣음 (체크필요)
           // 보통 이렇게 넣음 (체크필요)
@@ -576,21 +546,3 @@
                }, 0); // 숨김
           };
 
-
-          // |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-          //    비디오 로딩 후, 대기 이미지 없애기
-          // |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
-          //    \ (•◡•) /
-
-          // 
-          const videoContainers = document.querySelectorAll(".video-container");
-      
-          videoContainers.forEach(container => {
-              const video = container.querySelector("video");
-              const waitingImage = container.querySelector(".wating_img");
-      
-              // 비디오가 로드되면 해당 비디오의 이미지 숨기기
-              video.addEventListener('canplay', function () {
-                  waitingImage.style.display = 'none';
-              });
-          });
