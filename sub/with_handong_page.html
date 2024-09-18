@@ -75,11 +75,23 @@
                 </li>
 
                 <li class="cam_handong">
-                    <div class="video-container">
-                        <video controls autoplay muted loop playsinline preload="auto" poster="../img/bg.jpg">
-                            <source src="../vid/swdc_handong2.mp4?ver=0917" type="video/mp4" />
-                        </video>
+
+                    <div class="video-container" style="position: relative; ">
+                        <!-- 유튜브 썸네일 이미지 -->
+                        <img src="https://img.youtube.com/vi/967hJKLnurU/maxresdefault.jpg" alt="YouTube Thumbnail"
+                            style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                            id="thumbnail">
+
+                        <!-- 유튜브 영상 iframe -->
+                        <iframe width="560" height="315" id="youtube-video"
+                            src="https://www.youtube.com/embed/967hJKLnurU?autoplay=1&mute=1&playlist=967hJKLnurU&loop=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </div>
+
+
                     <div class="mute_mic mem_mute_mic"><img src="../img/mic_mute.png"></div>
                     <p class="mem_cam_name">🐱한동</p>
                 </li>

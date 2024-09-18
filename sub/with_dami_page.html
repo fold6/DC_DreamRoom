@@ -20,8 +20,8 @@
 
     <!-- CSS  -->
     <link href="../css/font.css" rel="stylesheet" />
-    <link href="../css/common.css?ver=09152312315" rel="stylesheet" />
-    <link href="../css/reset.css?ver=0907" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/sub_one_by_one.css?ver=0902237" rel="stylesheet" />
 
     <!-- Font awesome icon  -->
@@ -75,31 +75,29 @@
                     <!-- 내 캠 허용시 -->
                 </li>
 
+                <!-- 유튜브 URL -->
                 <li class="cam_dami">
-                    <div class="video-container">
-                        <video controls autoplay muted loop playsinline preload="auto" poster="../img/bg.jpg">
-                            <!-- <source src="../vid/swdc_dami2.mp4?ver=0917" type="video/mp4" /> -->
-                            <!-- 원본 -->
 
-                            
-                            <!-- <source src="https://hesper3dm.synology.me/sub/DC_Study_with_dreamcatcher/vid/swdc_jiu2.mp4?ver=0917" type="video/mp4" /> -->
-                            <!-- 시놀로지 url로 영상가져오기 테스트 : 성공 < 그런데 이러면 시놀에 의존하게 돼서 안댐.. 유튜브로 해야함....-->
+                    <div class="video-container" style="position: relative; ">
+                        <!-- 유튜브 썸네일 이미지 -->
+                        <img src="https://img.youtube.com/vi/LpOcRDhLnNE/maxresdefault.jpg" alt="YouTube Thumbnail"
+                            style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                            id="thumbnail">
 
-
-                        </video>
-                        
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/sO-p-wMr2MA&ab_?autoplay=1&mute=1&amp;playlist=sO-p-wMr2MA&ab_&amp;loop=1"
+                        <!-- 유튜브 영상 iframe -->
+                        <iframe width="560" height="315" id="youtube-video"
+                            src="https://www.youtube.com/embed/LpOcRDhLnNE?autoplay=1&mute=1&playlist=LpOcRDhLnNE&loop=1"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                            
-                            <!-- 유튜브로 가져오기.. < 이러면 초반에 컨트롤 ui 가 다 나옴...훔... 영상 언제 잘릴지도 모름.. 애초에 되는 영상인가? -->
-
+                            allowfullscreen>
+                        </iframe>
                     </div>
+
                     <div class="mute_mic mem_mute_mic"><img src="../img/mic_mute.png"></div>
                     <p class="mem_cam_name">🐼다미</p>
                 </li>
+
+
             </ul>
         </div>
 

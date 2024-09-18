@@ -30,6 +30,7 @@
         opacity: .2;
         filter: drop-shadow(0px 0px 1px #503ba8);
     }
+
     100% {
         opacity: 1;
         filter: drop-shadow(0px 0px 6px #785bee);
@@ -40,6 +41,27 @@
 /* ---------- Cam ---------- */
 /* ---------- Cam ---------- */
 /* ---------- Cam ---------- */
+
+/* 연결중 유튭 썸네일 숨/보이기 */
+@keyframes hideIframe {
+    0% {
+        opacity: 0;
+    }
+
+    /* 처음에는 보임 */
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+
+#youtube-video {
+    animation: hideIframe 4s;
+}
 
 .cam_wrap {
     /* background-color: yellow; */
@@ -66,12 +88,6 @@
     padding-bottom: 50px;
 }
 
-/* 전체멤 캠 */
-/* .cam_all li video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
 
 /* 1:1 멤일때 */
 .cam_one_by_one {
@@ -142,7 +158,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    /* 높이를 100%로 설정하여 부모 요소 크기에 맞게 확대합니다. */
     overflow: hidden;
 }
 
@@ -1073,18 +1088,18 @@ body {
 @media (max-width: 768px) {
 
     /* 로딩 */
-    
-.loading_img {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 40%;
-    left: 50%;
-    width: 15%;
-    animation-name: loading_ef;
-    animation-duration: 1.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
+
+    .loading_img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 50%;
+        width: 15%;
+        animation-name: loading_ef;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
 
 
     header {

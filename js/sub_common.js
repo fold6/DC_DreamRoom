@@ -470,4 +470,3 @@ $(document).ready(function () {
           }
      });
 });
-
