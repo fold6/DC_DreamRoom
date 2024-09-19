@@ -1,11 +1,10 @@
 @charset "utf-8";
 
-/* 드캐커서:기본 < 기본만 html로 처리하고 나머지는 JS로 처리함 */
+/* 드캐커서:기본 < 기본만 html로 처리하고 나머지는 JS로 처리 */
 html {
-     cursor: url('/img/default.png'), default;
+     cursor: url('../img/DC_cursor/default.png'), default;
 
 }
-
 
 * {
      margin: 0;

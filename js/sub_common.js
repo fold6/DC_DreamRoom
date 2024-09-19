@@ -332,45 +332,6 @@ $(document).ready(function () {
 
 
 
-// |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-//     Pointer cursor 
-// |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
-//    \ (•◡•) /
-
-$(document).ready(function () {
-     // 호버 이벤트에 따라 커서 이미지를 변경하는 함수를 정의합니다.
-     function setHoverCursorOnElement(selector) {
-          // 지정된 선택자에 해당하는 모든 요소를 가져옵니다.
-          var elements = document.querySelectorAll(selector);
-          // 각 요소에 대해 호버 이벤트를 등록합니다.
-          elements.forEach(function (element) {
-               // 호버 시 커서를 포인터로 변경하는 이벤트 리스너를 등록합니다.
-               element.addEventListener("mouseenter", function () {
-                    document.documentElement.style.cursor =
-                         "url('img/pointer.png'), pointer";
-               });
-               // 호버가 끝날 때 기본 커서로 변경하는 이벤트 리스너를 등록합니다.
-               element.addEventListener("mouseleave", function () {
-                    document.documentElement.style.cursor =
-                         "url('img/default.png'), default";
-               });
-          });
-     }
-
-     // .fullpage 클래스 <i> 요소에 호버 이벤트
-     setHoverCursorOnElement(".fullpage i");
-     // cam에 호버이벤트
-     setHoverCursorOnElement(".cam_all li");
-     // sideblock에 호버이벤트
-     setHoverCursorOnElement(".sideblock li");
-     // 서랍메뉴에 호버이벤트
-     setHoverCursorOnElement(".drag_box_inner_btn li");
-     // 서랍메뉴 열고 닫는 화살표에 호버이벤트
-     setHoverCursorOnElement(".box_arrow_btn");
-
-
-});
-
 
 
 /* 내 캠 */
@@ -469,4 +430,23 @@ $(document).ready(function () {
                $(".cam_one_by_one").css("grid-template-columns", originalGridTemplateColumns); // 원래의 CSS 값으로 복원
           }
      });
+});
+
+
+
+// 🖱️ Dreamcatcher Cursor 
+// |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
+//     cursor change
+// |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
+//    \ (•◡•) /
+
+$(document).ready(function () {
+
+     // 메인 화면 - 깃털 / 스타트 버튼 / 언어변경 호버시
+     $(".sideblock li, .fullpage, .controls button, .box_arrow_btn ,.drag_box_inner_btn li").hover(
+          function () {
+               $(this).css("cursor", "url('../img/DC_cursor/pointer.png'), pointer");
+          }
+     );
+
 });

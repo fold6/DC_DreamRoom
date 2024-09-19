@@ -5,12 +5,12 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Study With Dreamcatcher🔮</title>
+     <title>Dream Room</title>
 
      <!-- sns 공유 -->
-     <meta property="og:site_name" content="Study With Dreamcatcher">
-     <meta property="og:title" content="Study With Dreamcatcher">
-     <meta property="og:description" content="드림캐쳐와 함께 공부하기 (Study With Dreamcatcher)">
+     <meta property="og:site_name" content="Dream Room">
+     <meta property="og:title" content="Dream Room">
+     <meta property="og:description" content="드림캐쳐와 함께 작업하기 (Work With Dreamcatcher)">
      <meta property="og:type" content="website">
      <!-- 만들어야 함 -->
      <!-- 만들어야 함 -->
@@ -33,30 +33,46 @@
           referrerpolicy="no-referrer" />
 
 
-     <!-- 구글 애널리틱스 넣기  -->
-     <!-- 구글 애널리틱스 넣기  -->
-     <!-- 구글 애널리틱스 넣기  -->
      <!-- Google tag (gtag.js) -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBM8CKR2NR"></script>
+     <script>
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+               dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'G-SBM8CKR2NR');
+     </script>
 
 
 </head>
 <!-- 
  |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-  -240917:
-  -🧨이슈 해결 : 메인 페이지 용 저용량 영상 제작 - 4000kb 이하 정도의 2분 메인영상 7개 완성
-  - 사이트 명 : DreamRoom 으로 픽스, 깃허브에 기록시작
+ -240919:
+- 메인 및 각 멤버별 애널리틱스 연결
+- 메인 영상 깃 용량에 맞게 100mb이하 렌더링 체크 후 업로드 및 연결테스트
+< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
+< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
+< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
+< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
+< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
+< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
 
--240918:
- -🧨이슈 해결:  30분이상 긴 영상들 서버링크가 아닌 유튜브 링크로 수정
- - 유튜브 썸네일 등록 및 미리보기 이미지로 설정
- 
-  
+- 노트10+에서 음소거 컨트롤 안되는 부분 해결
+- 드림캐쳐 커서 연결
+
+- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
+- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
+- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
+- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
+- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
 
 ========================================
 - 해야될 부분 : 설명버튼 설명 이미지 슬라이드 
-- 해야될 부분 : 커서연결 제대로 하기
-- 해야될 부분 : sns 공유 이미지 만들기 
-- 해야될 부분 : 애널리틱스 연결하기
+
+- 해야될 부분 :
 
 
 
@@ -97,7 +113,7 @@
 
      <header>
           <div class="header_in">
-               <p class="title">Insomnia's Room</p>
+               <p class="title">Dream Room</p>
           </div>
           <div class="fullpage" id="fullscreenBtn"><i class="fas fa-expand"></i></div>
      </header>
@@ -234,23 +250,20 @@
 
                     <li class="cam_jiu">
                          <div class="video-container">
-                              <video controls autoplay muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_jiu.mp4" type="video/mp4" />
+                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
+                                   <!-- <source src="vid/swdc_jiu.mp4" type="video/mp4" /> -->
+                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
                               </video>
-
-                              <div class="wating_img">
-                                   <img class="cam_back_img" src="img/지유_profile.jpg">
-                                   <div class="inner_img"><img src="img/지유_profile.jpg"></div>
-                              </div>
-
                          </div>
+
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐰지유</p>
                     </li>
 
                     <li class="cam_sua">
+
                          <div class="video-container">
-                              <video controls autoplay muted loop playsinline preload="auto" poster="img/bg.jpg">
+                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
                                    <source src="vid/swdc_sua.mp4" type="video/mp4" />
                               </video>
 
@@ -261,8 +274,9 @@
 
                     <li class="cam_siyeon">
                          <div class="video-container">
-                              <video controls autoplay muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_siyeon.mp4" type="video/mp4" />
+                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
+                                   <!-- <source src="vid/swdc_siyeon.mp4" type="video/mp4" /> -->
+                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
                               </video>
 
                          </div>
@@ -271,9 +285,11 @@
                     </li>
 
                     <li class="cam_handong">
+
                          <div class="video-container">
-                              <video controls autoplay muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_handong.mp4" type="video/mp4" />
+                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
+                                   <!-- <source src="vid/swdc_handong.mp4" type="video/mp4" /> -->
+                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
                               </video>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
@@ -281,9 +297,11 @@
                     </li>
 
                     <li class="cam_yoohyeon">
+
                          <div class="video-container">
-                              <video controls autoplay muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_yoohyeon.mp4" type="video/mp4" />
+                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
+                                   <!-- <source src="vid/swdc_yoohyeon.mp4" type="video/mp4" /> -->
+                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
                               </video>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
@@ -291,9 +309,11 @@
                     </li>
 
                     <li class="cam_dami">
+
                          <div class="video-container">
-                              <video controls autoplay muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_dami.mp4" type="video/mp4" />
+                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
+                                   <!-- <source src="vid/swdc_dami.mp4" type="video/mp4" /> -->
+                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
                               </video>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
@@ -301,9 +321,11 @@
                     </li>
 
                     <li class="cam_gahyun">
+
                          <div class="video-container">
-                              <video controls autoplay muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_gahyun.mp4" type="video/mp4" />
+                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
+                                   <!-- <source src="vid/swdc_gahyun.mp4" type="video/mp4" /> -->
+                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
                               </video>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
@@ -332,10 +354,8 @@
      </script>
 
      <!-- 공통 JS -->
-     <script src="js/index.js?ver=0917"></script>
-
-
-
+     <script src="js/index.js?ver=0919"></script>
+    
 </body>
 
 </html>

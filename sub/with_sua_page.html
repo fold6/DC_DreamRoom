@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study With Sua🐥</title>
+    <title>Sua🐥's Room</title>
 
     <!-- sns 공유 -->
-    <meta property="og:site_name" content="Study With Dreamcatcher">
-    <meta property="og:title" content="Study With Dreamcatcher">
-    <meta property="og:description" content="드림캐쳐와 함께 공부하기 (Study With Dreamcatcher)">
+    <meta property="og:site_name" content="Dream Room">
+    <meta property="og:title" content="Dream Room">
+    <meta property="og:description" content="드림캐쳐와 함께 작업하기 (Work With Dreamcatcher)">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../img/sns_thum.png">
 
@@ -29,6 +29,19 @@
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         referrerpolicy="no-referrer" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87F3Z0P88T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-87F3Z0P88T');
+    </script>
 
 </head>
 
@@ -75,7 +88,7 @@
                 </li>
 
                 <li class="cam_sua">
-                   
+
                     <div class="video-container" style="position: relative; ">
 
                         <!-- 유튜브 썸네일 이미지 -->
@@ -120,7 +133,7 @@
 
                     // 공통 위젯이 로드된 후 sub_common.js 파일을 동적으로 로드합니다.
                     var script = document.createElement("script");
-                    script.src = "../js/sub_common.js?ver=09135wd8";
+                    script.src = "../js/sub_common.js";
                     script.type = "text/javascript";
                     document.body.appendChild(script); // 스크립트를 body에 추가
 
