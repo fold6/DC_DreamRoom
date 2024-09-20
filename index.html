@@ -52,27 +52,20 @@
  |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
  -240919:
 - 메인 및 각 멤버별 애널리틱스 연결
-- 메인 영상 깃 용량에 맞게 100mb이하 렌더링 체크 후 업로드 및 연결테스트
-< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
-< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
-< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
-< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
-< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
-< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // < 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
-
 - 노트10+에서 음소거 컨트롤 안되는 부분 해결
 - 드림캐쳐 커서 연결
 
-- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
-- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
-- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
-- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
-- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
 
+
+-240920:
+- 메인 영상 깃 용량에 맞게 2mb이하 초저화질으로 렌더링 체크 후 업로드 및 연결테스트
+- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
+< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // 
+< 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
+
+- 초 저화질 (1000mb 이하로 해도 동시재생은 렉걸림...) < 메인 페이지는 영상 하나로 만들기
 ========================================
 - 해야될 부분 : 설명버튼 설명 이미지 슬라이드 
-
-- 해야될 부분 :
 
 
 
@@ -249,11 +242,26 @@
                     </li>
 
                     <li class="cam_jiu">
-                         <div class="video-container">
+                         <!-- <div class="video-container">
                               <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <!-- <source src="vid/swdc_jiu.mp4" type="video/mp4" /> -->
-                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
+                                   <source src="vid/swdc_jiu.mp4" type="video/mp4" />
                               </video>
+                         </div> -->
+
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                                   alt="YouTube Thumbnail"
+                                   style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                   id="thumbnail">
+
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   title="YouTube video player" frameborder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowfullscreen>
+                              </iframe>
                          </div>
 
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
@@ -262,35 +270,65 @@
 
                     <li class="cam_sua">
 
-                         <div class="video-container">
-                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
-                              </video>
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                                   alt="YouTube Thumbnail"
+                                   style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                   id="thumbnail">
 
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   title="YouTube video player" frameborder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowfullscreen>
+                              </iframe>
                          </div>
+
+
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐥수아</p>
                     </li>
 
                     <li class="cam_siyeon">
-                         <div class="video-container">
-                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <!-- <source src="vid/swdc_siyeon.mp4" type="video/mp4" /> -->
-                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
-                              </video>
 
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                                   alt="YouTube Thumbnail"
+                                   style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                   id="thumbnail">
+
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   title="YouTube video player" frameborder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowfullscreen>
+                              </iframe>
                          </div>
+
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐺시연</p>
                     </li>
 
                     <li class="cam_handong">
 
-                         <div class="video-container">
-                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <!-- <source src="vid/swdc_handong.mp4" type="video/mp4" /> -->
-                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
-                              </video>
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                                   alt="YouTube Thumbnail"
+                                   style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                   id="thumbnail">
+
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   title="YouTube video player" frameborder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowfullscreen>
+                              </iframe>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐱한동</p>
@@ -298,11 +336,20 @@
 
                     <li class="cam_yoohyeon">
 
-                         <div class="video-container">
-                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <!-- <source src="vid/swdc_yoohyeon.mp4" type="video/mp4" /> -->
-                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
-                              </video>
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                                   alt="YouTube Thumbnail"
+                                   style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                   id="thumbnail">
+
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   title="YouTube video player" frameborder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowfullscreen>
+                              </iframe>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐶유현</p>
@@ -310,11 +357,20 @@
 
                     <li class="cam_dami">
 
-                         <div class="video-container">
-                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <!-- <source src="vid/swdc_dami.mp4" type="video/mp4" /> -->
-                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
-                              </video>
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                                   alt="YouTube Thumbnail"
+                                   style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                   id="thumbnail">
+
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   title="YouTube video player" frameborder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowfullscreen>
+                              </iframe>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐼다미</p>
@@ -322,11 +378,20 @@
 
                     <li class="cam_gahyun">
 
-                         <div class="video-container">
-                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <!-- <source src="vid/swdc_gahyun.mp4" type="video/mp4" /> -->
-                                   <source src="vid/swdc_sua.mp4" type="video/mp4" />
-                              </video>
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                                   alt="YouTube Thumbnail"
+                                   style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                   id="thumbnail">
+
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   title="YouTube video player" frameborder="0"
+                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                   allowfullscreen>
+                              </iframe>
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🦊가현</p>
@@ -355,7 +420,7 @@
 
      <!-- 공통 JS -->
      <script src="js/index.js?ver=0919"></script>
-    
+
 </body>
 
 </html>
