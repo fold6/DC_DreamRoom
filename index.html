@@ -5,17 +5,14 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Dream Room</title>
+     <title>0921_Dream Room </title>
 
      <!-- sns 공유 -->
      <meta property="og:site_name" content="Dream Room">
      <meta property="og:title" content="Dream Room">
      <meta property="og:description" content="드림캐쳐와 함께 작업하기 (Work With Dreamcatcher)">
      <meta property="og:type" content="website">
-     <!-- 만들어야 함 -->
-     <!-- 만들어야 함 -->
-     <!-- 만들어야 함 -->
-     <meta property="og:image" content="img/sns_thum.png">
+     <meta property="og:image" content="img/sns_thum.png?ver=0921">
 
      <!-- 파비콘 -->
      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -50,20 +47,16 @@
 </head>
 <!-- 
  |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
- -240919:
-- 메인 및 각 멤버별 애널리틱스 연결
-- 노트10+에서 음소거 컨트롤 안되는 부분 해결
-- 드림캐쳐 커서 연결
-
-
 
 -240920:
-- 메인 영상 깃 용량에 맞게 2mb이하 초저화질으로 렌더링 체크 후 업로드 및 연결테스트
-- 해야될 부분 : sns 공유 이미지 만들기 < 하는 중 이었음
-< 깃 허브에 파일로 올렸더니 또 렉걸림 (PC만 렉걸림) // 
-< 시도 깃 허브에 제일 저용량 파일으로만 구성해보고 렉안걸리면 그 정도 용량으로 다시 렌더링 ㄱㄱ
+- 영상 모두 유튜브 ifream으로 대체
+- SNS 공유 이미지 제작 00
 
-- 초 저화질 (1000mb 이하로 해도 동시재생은 렉걸림...) < 메인 페이지는 영상 하나로 만들기
+========================================
+-240921 :
+- 깃허브에서 유튜브 영상 연결안되는 부분 해결필요
+- 깃허브에서 sns 공유 이미지 연결 안되는거 해결 필요
+
 ========================================
 - 해야될 부분 : 설명버튼 설명 이미지 슬라이드 
 
@@ -79,7 +72,7 @@
      }
 
      /* 메인 비디오 비디오 터치 X + 컨트롤 숨기기 */
-     video {
+     /* video {
           pointer-events: none;
      }
 
@@ -93,7 +86,7 @@
 
      video::-ms-media-controls {
           display: none !important;
-     }
+     } */
 </style>
 
 <body>
@@ -242,27 +235,34 @@
                     </li>
 
                     <li class="cam_jiu">
-                         <!-- <div class="video-container">
-                              <video autoplay="true" controls muted loop playsinline preload="auto" poster="img/bg.jpg">
-                                   <source src="vid/swdc_jiu.mp4" type="video/mp4" />
-                              </video>
-                         </div> -->
-
-                         <div class="video-container" style="position: relative; ">
-                              <!-- 유튜브 썸네일 이미지 -->
-                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                         <!-- <div class="video-container" style="position: relative; ">
+                              <img src="https://img.youtube.com/vi/3XnnSwl-eYA/maxresdefault.jpg"
                                    alt="YouTube Thumbnail"
                                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
                                    id="thumbnail">
 
-                              <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   src="https://www.youtube.com/embed/3XnnSwl-eYA?autoplay=1&mute=1&playlist=3XnnSwl-eYA&loop=1"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
                               </iframe>
-                         </div>
+                         </div> -->
+                         <!-- 유튜브 안돼서 test -->
+                         <div class="video-container" style="position: relative; ">
+                              <!-- 유튜브 썸네일 이미지 -->
+                              <img src="https://img.youtube.com/vi/qShkt8cvwGg/maxresdefault.jpg" alt="YouTube Thumbnail"
+                                  style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
+                                  id="thumbnail">
+      
+                              <!-- 유튜브 영상 iframe -->
+                              <iframe width="560" height="315" id="youtube-video"
+                                  src="https://www.youtube.com/embed/qShkt8cvwGg?autoplay=1&mute=1&playlist=qShkt8cvwGg&loop=1"
+                                  title="YouTube video player" frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowfullscreen>
+                              </iframe>
+                          </div>
 
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐰지유</p>
@@ -272,14 +272,14 @@
 
                          <div class="video-container" style="position: relative; ">
                               <!-- 유튜브 썸네일 이미지 -->
-                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                              <img src="https://img.youtube.com/vi/eC592-Uql5M/maxresdefault.jpg"
                                    alt="YouTube Thumbnail"
                                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
                                    id="thumbnail">
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   src="https://www.youtube.com/embed/eC592-Uql5M?autoplay=1&mute=1&playlist=eC592-Uql5M&loop=1"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -295,14 +295,14 @@
 
                          <div class="video-container" style="position: relative; ">
                               <!-- 유튜브 썸네일 이미지 -->
-                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                              <img src="https://img.youtube.com/vi/TvQgv5rKPS4/maxresdefault.jpg"
                                    alt="YouTube Thumbnail"
                                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
                                    id="thumbnail">
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   src="https://www.youtube.com/embed/TvQgv5rKPS4?autoplay=1&mute=1&playlist=TvQgv5rKPS4&loop=1"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -317,14 +317,14 @@
 
                          <div class="video-container" style="position: relative; ">
                               <!-- 유튜브 썸네일 이미지 -->
-                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                              <img src="https://img.youtube.com/vi/ypAZhUSsUp8/maxresdefault.jpg"
                                    alt="YouTube Thumbnail"
                                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
                                    id="thumbnail">
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   src="https://www.youtube.com/embed/ypAZhUSsUp8?autoplay=1&mute=1&playlist=ypAZhUSsUp8&loop=1"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -338,14 +338,14 @@
 
                          <div class="video-container" style="position: relative; ">
                               <!-- 유튜브 썸네일 이미지 -->
-                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                              <img src="https://img.youtube.com/vi/CCfdY_2JKHQ/maxresdefault.jpg"
                                    alt="YouTube Thumbnail"
                                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
                                    id="thumbnail">
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   src="https://www.youtube.com/embed/CCfdY_2JKHQ?autoplay=1&mute=1&playlist=CCfdY_2JKHQ&loop=1"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -359,14 +359,14 @@
 
                          <div class="video-container" style="position: relative; ">
                               <!-- 유튜브 썸네일 이미지 -->
-                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                              <img src="https://img.youtube.com/vi/dJoSuR_ubZI/maxresdefault.jpg"
                                    alt="YouTube Thumbnail"
                                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
                                    id="thumbnail">
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   src="https://www.youtube.com/embed/dJoSuR_ubZI?autoplay=1&mute=1&playlist=dJoSuR_ubZI&loop=1"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -380,14 +380,14 @@
 
                          <div class="video-container" style="position: relative; ">
                               <!-- 유튜브 썸네일 이미지 -->
-                              <img src="https://img.youtube.com/vi/8_hZL0jT0Ak/maxresdefault.jpg"
+                              <img src="https://img.youtube.com/vi/nK94MNmL-48/maxresdefault.jpg"
                                    alt="YouTube Thumbnail"
                                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;width: 100%;object-position: center center;object-fit: cover;height: 100%;"
                                    id="thumbnail">
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/8_hZL0jT0Ak?autoplay=1&mute=1&playlist=8_hZL0jT0Ak&loop=1"
+                                   src="https://www.youtube.com/embed/nK94MNmL-48?autoplay=1&mute=1&playlist=nK94MNmL-48&loop=1"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -419,7 +419,7 @@
      </script>
 
      <!-- 공통 JS -->
-     <script src="js/index.js?ver=0919"></script>
+     <script src="js/index.js?ver=0920"></script>
 
 </body>
 
