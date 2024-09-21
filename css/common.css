@@ -230,6 +230,8 @@
 html {
     background: url('../img/bg.jpg?ver=2ewdw2')center center / cover;
     height: 100vh;
+    width: 100vw;
+    background: radial-gradient(ellipse at bottom, rgb(20, 14, 81), rgb(10, 10, 26));
 }
 
 
@@ -433,6 +435,7 @@ main {
     margin: 0 auto;
     text-align: center;
     display: inline-block;
+    
 }
 
 
@@ -534,7 +537,7 @@ main {
     border-radius: 50%;
     overflow: hidden;
     object-position: center center;
-    object-fit: h;
+    /* object-fit: h; */
     /* background-color: #ededed; */
     display: block;
     box-sizing: border-box;

@@ -442,7 +442,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-     // 메인 화면 - 깃털 / 스타트 버튼 / 언어변경 호버시
      $(".sideblock li, .fullpage, .controls button, .box_arrow_btn ,.drag_box_inner_btn li").hover(
           function () {
                $(this).css("cursor", "url('../img/DC_cursor/pointer.png'), pointer");
