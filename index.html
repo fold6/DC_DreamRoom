@@ -10,7 +10,9 @@
      <!-- sns 공유 -->
      <meta property="og:site_name" content="Dream Room">
      <meta property="og:title" content="Dream Room">
-     <meta property="og:description" content="드림캐쳐와 함께 작업하기 (Work With Dreamcatcher)">
+     <meta property="og:description" content="드림캐쳐와 함께 집중&힐링하기 (Focus & chill out with Dreamcatcher)">
+
+     
      <meta property="og:type" content="website">
      <meta property="og:image" content="img/sns_thum.png?ver=0922">
 
@@ -18,9 +20,15 @@
      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
      <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
+
+     <!-- 스와이퍼 -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.7/swiper-element-bundle.js"></script>
+     <!-- 스와이퍼 CSS -->
+     <link href="css/swiper-bundle.css" rel="stylesheet">
+
      <!-- CSS  -->
      <link href="css/font.css" rel="stylesheet" />
-     <link href="css/common.css?ver=092222" rel="stylesheet" />
+     <link href="css/common.css" rel="stylesheet" />
      <link href="css/reset.css" rel="stylesheet" />
 
      <!-- Font awesome icon  -->
@@ -47,7 +55,14 @@
 </head>
 <!-- 
  |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-- 해야될 부분 : 설명버튼 설명 이미지 슬라이드 
+     -240922
+- 수아 개인캠 30 분이상 영상으로 재업 및 재연결
+- index에 설명 팝업 쿠키랑 같이 넣기 완료
+- 사이트 공유 설명 문구 변경 완료
+- 설명버튼 설명 이미지 슬라이드 제작중
+
+
+     - 해야될 부분 : 설명슬라이드에 한/영 전환버튼 및 기능추가
 
  |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
  \ (•◡•) / Update MEMO
@@ -66,6 +81,89 @@
                <img src="img/loading_icon.png">
           </div>
      </div>
+
+     <!-- 팝업 -->
+     <div class="popup_wrap_inner" id="pop" style="display: block;">
+
+          <!-- Guide Notice -->
+          <div class="close_btn"><img src="img/close_btn.png"></div>
+          
+           <!-- 상단 언어변경 -->
+           <div class="tr_com_lang_wrap">
+               <!-- 한국어변환 버튼 -->
+               <div class="tr_com_lang bright ripple" id="ko_lang">
+                   <img src="img/lang_ko.png" alt="ko_lang">
+                   <p class="lang_chan_btn">
+                       KO
+                   </p>
+               </div>
+               <!-- 영어변환 버튼 -->
+               <div class="tr_com_lang bright ripple" id="eng_lang" style="display:none;">
+                   <img src="img/lang_eng.png" alt="eng_lang">
+                   <p class="lang_chan_btn">
+                       ENG
+                   </p>
+               </div>
+           </div>
+
+          <swiper-container class="guide_slide_wrap" pagination="true">
+               <!-- 1 -->
+               <swiper-slide>
+                    <div class="guide_box" id="gu_1">
+                         <!-- 영문 번역시 줄바꿈 이슈 때문에 '.guide_tit' 만 pre로 변경 (줄바꿈 enter 그대로 적용) -->
+                         <p class="guide_tit"><span class="col_big">테스트1</span> 로
+                              드캐투어 가보자고!</p>
+                         <p class="sub_text">DreamPlace는 드림캐쳐가<br>방문했던 장소를 표기해주는 지도에요</p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g1.png" alt="guide_img"><img>
+                         </div>
+                         <p class="mini_text">* 오정보,오류 등 문의는 오른쪽 하단의 '방명록'을 이용해주세요</p>
+                    </div>
+               </swiper-slide>
+               <!-- 2 -->
+               <swiper-slide>
+                    <div class="guide_box" id="gu_2">
+                         <p class="guide_tit"><span class="col_big">테스트2222</span>와
+                              <span class="col_big">컨텐츠</span>를 볼 수 있어요
+                         </p>
+                         <p class="sub_text">장소이름 클릭 시 정보(영업시간 등)를,<br>컨텐츠 클릭 시 드림캐쳐의 모습을 볼 수 있어요</p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g2.png" alt="guide_img"><img>
+                         </div>
+                         <p class="mini_text">* 맵 오른쪽 하단의 '방명록' 에서 더 많은 장소 제보를 기다려요</p>
+                    </div>
+               </swiper-slide>
+               <!-- 3 -->
+               <swiper-slide>
+                    <div class="guide_box" id="gu_3">
+                         <p class="guide_tit"><span class="col_big">멤버 별</span> 방문장소
+                              <span class="col_big">필터링!</span></p>
+                         <p class="sub_text">각 멤버별로 방문한 장소를 필터링 해서<br>원하는 장소만 볼 수 있어요!</p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g3.png" alt="guide_img"><img>
+                         </div>
+                         <p class="mini_text">* 표기장소가 많아지면 지역별 필터링을 추가 예정이에요</p>
+                    </div>
+               </swiper-slide>
+               <!-- 4 -->
+               <swiper-slide>
+                    <div class="guide_box" id="gu_4">
+                         <p class="guide_tit"><span class="col_big">방명록</span> 에서
+                              <span class="col_big">InSomnia Talk!</span>
+                         </p>
+                         <p class="sub_text">방문후기 및 지도 표기요청 등<br>로그인 없이 다양한 이야기를 할 수 있어요!</p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g4.png" alt="guide_img"><img>
+                         </div>
+                         <p class="mini_text">* ‘비회원으로 작성하겠습니다’ 에 체크 후 댓글을 작성해주세요</p>
+                    </div>
+          </swiper-container>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination" style="background-color: black!important;"></div> -->
+          </swiper-slide>
+          <div class="bk_common_bg"></div>
+     </div>
+     <!-- popup_wrap_inner END -->
 
      <header>
           <div class="header_in">
@@ -371,9 +469,11 @@
      <!-- jquery-ui-touch-punch -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js">
      </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+     <!-- 제이쿼리 쿠키 : 쿠키는 제이쿼리보다 밑에 있어야 동작 -->
 
      <!-- 공통 JS -->
-     <script src="js/index.js?ver=0922"></script>
+     <script src="js/index.js"></script>
 
 </body>
 
