@@ -70,6 +70,7 @@ $(document).ready(function () {
 //  카메라 사용 허용시 내 얼굴+Me글자 숨김
 // |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
 //    \ (•◡•) /
+/* 아래는 해상도 제한하기 전 원본 */
 $(document).ready(function () {
      navigator.mediaDevices.getUserMedia({
                video: true
@@ -89,6 +90,51 @@ $(document).ready(function () {
                $(".waiting_text").show();
           });
 });
+
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
+// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
+/* $(document).ready(function () {
+     navigator.mediaDevices.getUserMedia({
+         video: {
+             width: { ideal: 640 }, // 이상적인 너비
+             height: { ideal: 360 } // 이상적인 높이
+         }
+     })
+     .then(function (stream) {
+         var videoElement = document.getElementById("videoElement");
+         videoElement.srcObject = stream;
+ 
+         // 카메라 사용이 허용되었으므로 이미지를 보여줍니다.
+         $(".waiting_text").hide();
+ 
+         // 비디오를 좌우로 반전시킵니다.
+         videoElement.style.transform = "scaleX(-1)";
+     })
+     .catch(function (error) {
+         console.log("카메라 사용 권한을 얻지 못했습니다.", error);
+         // 카메라 사용이 허용되지 않았으므로 이미지를 숨깁니다.
+         $(".waiting_text").show();
+     });
+ });
+  */
 
 
 
@@ -477,72 +523,6 @@ $(document).ready(function () {
 });
 
 
-/* 
-         |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-              언어변환 클릭이벤트
-         |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
-         \ (•◡•) /
-      */
-
-// 언어별 텍스트를 객체로 관리
-const langData = {
-     ko: {
-          noti_text: '※ 팬 메이드 사이트이며, 상업적 이용을 하지 않습니다.<br><span class="noti_small">ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED</span>',
-          tip_text: '타이틀의 깃털을 뒤집거나 터치하여 다른 꿈속으로 이동할 수 있어요.',
-          title_text: '- 틀린그림 찾기 -',
-          start_text: 'Touch To Start'
-     },
-     eng: {
-          noti_text: '※ This is a fan-made site, and it is not used for commercial purposes.<br><span class="noti_small">ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED</span>',
-          tip_text: 'You can flip or touch the feather in the title to move into a different dream..',
-          title_text: '- Find the Difference -',
-          start_text: 'Touch To Start'
-     }
-};
-
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-// 
-// 텍스트 변경 함수
-function setLanguage(lang) {
-     document.querySelector('.noti_text').innerHTML = langData[lang].noti_text;
-     document.querySelector('.tip_text').textContent = langData[lang].tip_text;
-     document.querySelector('.title_text').textContent = langData[lang].title_text;
-     document.querySelector('.start_text').textContent = langData[lang].start_text;
-}
-
-// 초기 언어 설정 (한국어)
-setLanguage('ko');
-
-// 한국어 -> 영어로 변환
-document.getElementById('ko_lang').addEventListener('click', function () {
-     document.getElementById('ko_lang').style.display = 'none';
-     document.getElementById('eng_lang').style.display = 'inline-block';
-     setLanguage('eng');
-     // 언어 설정을 localStorage에 저장하여 다음페이지에서 변경된 언어설정 유지
-     localStorage.setItem('language', 'eng');
-});
-
-// 영어 -> 한국어로 변환
-document.getElementById('eng_lang').addEventListener('click', function () {
-     document.getElementById('eng_lang').style.display = 'none';
-     document.getElementById('ko_lang').style.display = 'inline-block';
-     setLanguage('ko');
-     // 언어 설정을 localStorage에 저장하여 다음페이지에서 변경된 언어설정 유지
-     localStorage.setItem('language', 'ko');
-});
-
-
-
-
-
 
 
 
@@ -587,3 +567,174 @@ $(document).ready(function () {
           $('#pop').hide(); 
      }
 }); */
+
+
+
+
+
+/* 
+         |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
+              언어변환 클릭이벤트
+         |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
+         \ (•◡•) /
+      */
+
+// 언어별 텍스트를 객체로 관리
+// const langData = {
+//      ko: {
+//           noti_text: '※ 팬 메이드 사이트이며, 상업적 이용을 하지 않습니다.<br><span class="noti_small">ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED</span>',
+//           tip_text: '타이틀의 깃털을 뒤집거나 터치하여 다른 꿈속으로 이동할 수 있어요.',
+//           title_text: '- 틀린그림 찾기 -',
+//           start_text: 'Touch To Start'
+//      },
+//      eng: {
+//           noti_text: '※ This is a fan-made site, and it is not used for commercial purposes.<br><span class="noti_small">ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED</span>',
+//           tip_text: 'You can flip or touch the feather in the title to move into a different dream..',
+//           title_text: '- Find the Difference -',
+//           start_text: 'Touch To Start'
+//      }
+// };
+
+// // id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
+
+// // 텍스트 변경 함수
+// function setLanguage(lang) {
+//      document.querySelector('.noti_text').innerHTML = langData[lang].noti_text;
+//      document.querySelector('.tip_text').textContent = langData[lang].tip_text;
+//      document.querySelector('.title_text').textContent = langData[lang].title_text;
+//      document.querySelector('.start_text').textContent = langData[lang].start_text;
+// }
+
+// // 초기 언어 설정 (한국어)
+// setLanguage('ko');
+
+// // 한국어 -> 영어로 변환
+// document.getElementById('ko_lang').addEventListener('click', function () {
+//      document.getElementById('ko_lang').style.display = 'none';
+//      document.getElementById('eng_lang').style.display = 'inline-block';
+//      setLanguage('eng');
+//      // 언어 설정을 localStorage에 저장하여 다음페이지에서 변경된 언어설정 유지
+//      localStorage.setItem('language', 'eng');
+// });
+
+// // 영어 -> 한국어로 변환
+// document.getElementById('eng_lang').addEventListener('click', function () {
+//      document.getElementById('eng_lang').style.display = 'none';
+//      document.getElementById('ko_lang').style.display = 'inline-block';
+//      setLanguage('ko');
+//      // 언어 설정을 localStorage에 저장하여 다음페이지에서 변경된 언어설정 유지
+//      localStorage.setItem('language', 'ko');
+// });
+
+// 이상 원본코드
+// 이상 원본코드
+// 이상 원본코드
+
+
+
+
+
+/* 
+         |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
+              언어변환 클릭이벤트
+         |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
+         \ (•◡•) /
+      */
+// 언어별 텍스트를 객체로 관리
+const langData = {
+     ko: {
+          gu_1: {
+               title: '테스트1와 <span class="col_big">컨텐츠<br></span>를 볼 수 있어요',
+               sub: 'DreamPlace는 드림캐쳐가<br>방문했던 장소를 표기해주는 지도에요',
+               mini: '* 오정보,오류 등 문의는 오른쪽 하단의 \'방명록\'을 이용해주세요<br>둘째줄'
+          },
+          gu_2: {
+               title: '테스트2와 <span class="col_big">컨텐츠<br></span>를 볼 수 있어요',
+               sub: '장소이름 클릭 시 정보(영업시간 등)를,<br>컨텐츠 클릭 시 드림캐쳐의 모습을 볼 수 있어요',
+               mini: '* 맵 오른쪽 하단의 \'방명록\' 에서 더 많은 장소 제보를 기다려요'
+          },
+          gu_3: {
+               title: '테스트3 방문장소 <span class="col_big">컨텐츠<br></span>',
+               sub: '각 멤버별로 방문한 장소를 필터링 해서<br>원하는 장소만 볼 수 있어요!',
+               mini: '* 표기장소가 많아지면 지역별 필터링을 추가 예정이에요'
+          },
+          gu_4: {
+               title: '테스트4 에서 <span class="col_big">컨텐츠<br></span>',
+               sub: '방문후기 및 지도 표기요청 등<br>로그인 없이 다양한 이야기를 할 수 있어요!',
+               mini: '* ‘비회원으로 작성하겠습니다’ 에 체크 후 댓글을 작성해주세요'
+          }
+     },
+     eng: {
+          gu_1: {
+               title: 'Let\'s go to Dreamcatcher in <span class="col_big">Test 1</span>!',
+               sub: 'DreamPlace is a map that shows the places visited by Dreamcatcher.<br>',
+               mini: '* For inquiries regarding misinformation or errors, please use the "Guestbook" at the bottom right.<br>line_2'
+          },
+          gu_2: {
+               title: 'You can see <span class="col_big">content</span> and <span class="col_big">Test 2</span>!',
+               sub: 'Clicking on the location name shows information (opening hours, etc.),<br> and clicking on the content shows the members of Dreamcatcher.',
+               mini: '* We are waiting for more location suggestions in the "Guestbook" at the bottom right of the map.'
+          },
+          gu_3: {
+               title: 'Filtering the visited places in <span class="col_big">Test 3</span>!',
+               sub: 'You can filter places visited by each member<br>to see only the places you want!',
+               mini: '* As the number of listed places increases, we plan to add regional filtering.'
+          },
+          gu_4: {
+               title: 'Let\'s talk about <span class="col_big">InSomnia</span> in Test 4!',
+               sub: 'You can share visit reviews and request map markings<br>without logging in and share various stories!',
+               mini: '* Please check "I will write as a non-member" before submitting your comment.'
+          }
+     }
+};
+
+// 텍스트 변경 함수
+function setLanguage(lang) {
+     for (let i = 1; i <= 4; i++) {
+          const langContent = langData[lang]['gu_' + i];
+          document.getElementById('gu_' + i).querySelector('.guide_tit').innerHTML = langContent.title;
+          document.getElementById('gu_' + i).querySelector('.sub_text').innerHTML = langContent.sub;
+          document.getElementById('gu_' + i).querySelector('.mini_text').innerHTML = langContent.mini;
+     }
+}
+
+// 페이지 로드 시 언어 설정 불러오기
+window.onload = function () {
+     const loading_icon = document.getElementById('loading_icon');
+
+     // 로딩 아이콘 페이드 아웃
+     loading_icon.style.transition = 'opacity 0.3s ease';
+     loading_icon.style.opacity = '0';
+
+     // 페이드 아웃 후 로딩 아이콘 숨김
+     setTimeout(function () {
+          loading_icon.style.display = 'none';
+     }, 300); // 300ms 후에 숨김
+
+     // 초기 언어 설정 (한국어)
+     const savedLanguage = localStorage.getItem('language') || 'ko';
+     setLanguage(savedLanguage);
+     if (savedLanguage === 'eng') {
+          document.getElementById('ko_lang').style.display = 'none';
+          document.getElementById('eng_lang').style.display = 'inline-block';
+     } else {
+          document.getElementById('eng_lang').style.display = 'none';
+          document.getElementById('ko_lang').style.display = 'inline-block';
+     }
+};
+
+// 한국어 -> 영어로 변환
+document.getElementById('ko_lang').addEventListener('click', function () {
+     document.getElementById('ko_lang').style.display = 'none';
+     document.getElementById('eng_lang').style.display = 'inline-block';
+     setLanguage('eng');
+     localStorage.setItem('language', 'eng');
+});
+
+// 영어 -> 한국어로 변환
+document.getElementById('eng_lang').addEventListener('click', function () {
+     document.getElementById('eng_lang').style.display = 'none';
+     document.getElementById('ko_lang').style.display = 'inline-block';
+     setLanguage('ko');
+     localStorage.setItem('language', 'ko');
+});

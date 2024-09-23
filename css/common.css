@@ -45,20 +45,21 @@
 /* 팝업 */
 .popup_wrap_inner {
     position: fixed;
-    z-index: 900;
+    z-index: 999999;
     width: 100%;
     display: none;
     /* 숨겨놓고 JS와 쿠키로 보임/숨김 실행 */
 }
+
 /* 한/영 전환버튼 */
-.tr_com_lang_wrap{
+.tr_com_lang_wrap {
     position: fixed;
+    transform: translateX(-145px);
+    left: 50%;
     z-index: 9999;
     top: 7%;
-    left: 0%;
-    transform: translateX(88px);
-
 }
+
 .tr_com_lang {
     height: 18px;
     line-height: 19px;
@@ -160,7 +161,7 @@ swiper-slide {
 
 .bk_common_bg {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     z-index: 12;
     width: 100%;
@@ -183,7 +184,7 @@ swiper-slide {
     font-weight: 900;
     color: #333;
     margin-bottom: 10px;
-    white-space: pre-line;
+    /* white-space: pre-line; */
     padding: 0 15px;
 }
 
@@ -191,7 +192,7 @@ swiper-slide {
     color: #8115ff;
     font-weight: inherit;
     font-size: inherit;
-    
+
 }
 
 .sub_text {

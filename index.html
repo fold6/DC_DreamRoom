@@ -12,7 +12,7 @@
      <meta property="og:title" content="Dream Room">
      <meta property="og:description" content="드림캐쳐와 함께 집중&힐링하기 (Focus & chill out with Dreamcatcher)">
 
-     
+
      <meta property="og:type" content="website">
      <meta property="og:image" content="img/sns_thum.png?ver=0922">
 
@@ -55,14 +55,16 @@
 </head>
 <!-- 
  |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-     -240922
-- 수아 개인캠 30 분이상 영상으로 재업 및 재연결
-- index에 설명 팝업 쿠키랑 같이 넣기 완료
-- 사이트 공유 설명 문구 변경 완료
-- 설명버튼 설명 이미지 슬라이드 제작중
+
+-240923
+
+-  설명슬라이드에 한/영 전환버튼 및 기능추가 (위치잡기/JS동작완 -- 일러스트에 있는 내용+번역본 넣어야함)
+        
 
 
-     - 해야될 부분 : 설명슬라이드에 한/영 전환버튼 및 기능추가
+==============================
+- 해야될 부분 :설명버튼 설명 이미지 슬라이드 제작중 (이거 프로그램 이슈부터 해결해야할듯)
+
 
  |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
  \ (•◡•) / Update MEMO
@@ -87,79 +89,73 @@
 
           <!-- Guide Notice -->
           <div class="close_btn"><img src="img/close_btn.png"></div>
-          
-           <!-- 상단 언어변경 -->
-           <div class="tr_com_lang_wrap">
+
+          <!-- 상단 언어변경 -->
+          <div class="tr_com_lang_wrap">
                <!-- 한국어변환 버튼 -->
                <div class="tr_com_lang bright ripple" id="ko_lang">
-                   <img src="img/lang_ko.png" alt="ko_lang">
-                   <p class="lang_chan_btn">
-                       KO
-                   </p>
+                    <img src="img/lang_ko.png" alt="ko_lang">
+                    <p class="lang_chan_btn">
+                         KO
+                    </p>
                </div>
                <!-- 영어변환 버튼 -->
                <div class="tr_com_lang bright ripple" id="eng_lang" style="display:none;">
-                   <img src="img/lang_eng.png" alt="eng_lang">
-                   <p class="lang_chan_btn">
-                       ENG
-                   </p>
+                    <img src="img/lang_eng.png" alt="eng_lang">
+                    <p class="lang_chan_btn">
+                         ENG
+                    </p>
                </div>
-           </div>
+          </div>
 
+          <!-- 가이드 팝업 내용 틀 -->
           <swiper-container class="guide_slide_wrap" pagination="true">
                <!-- 1 -->
                <swiper-slide>
-                    <div class="guide_box" id="gu_1">
-                         <!-- 영문 번역시 줄바꿈 이슈 때문에 '.guide_tit' 만 pre로 변경 (줄바꿈 enter 그대로 적용) -->
-                         <p class="guide_tit"><span class="col_big">테스트1</span> 로
-                              드캐투어 가보자고!</p>
-                         <p class="sub_text">DreamPlace는 드림캐쳐가<br>방문했던 장소를 표기해주는 지도에요</p>
-                         <div class="g_img_wrap">
-                              <img src="img/DC_guide/g1.png" alt="guide_img"><img>
-                         </div>
-                         <p class="mini_text">* 오정보,오류 등 문의는 오른쪽 하단의 '방명록'을 이용해주세요</p>
-                    </div>
+                   <div class="guide_box" id="gu_1">
+                       <p class="guide_tit"><span class="col_big"></span></p>
+                       <p class="sub_text"></p>
+                       <div class="g_img_wrap">
+                           <img src="img/DC_guide/g1.png" alt="guide_img">
+                       </div>
+                       <p class="mini_text"></p>
+                   </div>
                </swiper-slide>
                <!-- 2 -->
                <swiper-slide>
-                    <div class="guide_box" id="gu_2">
-                         <p class="guide_tit"><span class="col_big">테스트2222</span>와
-                              <span class="col_big">컨텐츠</span>를 볼 수 있어요
-                         </p>
-                         <p class="sub_text">장소이름 클릭 시 정보(영업시간 등)를,<br>컨텐츠 클릭 시 드림캐쳐의 모습을 볼 수 있어요</p>
-                         <div class="g_img_wrap">
-                              <img src="img/DC_guide/g2.png" alt="guide_img"><img>
-                         </div>
-                         <p class="mini_text">* 맵 오른쪽 하단의 '방명록' 에서 더 많은 장소 제보를 기다려요</p>
-                    </div>
+                   <div class="guide_box" id="gu_2">
+                       <p class="guide_tit"><span class="col_big"></span></p>
+                       <p class="sub_text"></p>
+                       <div class="g_img_wrap">
+                           <img src="img/DC_guide/g2.png" alt="guide_img">
+                       </div>
+                       <p class="mini_text"></p>
+                   </div>
                </swiper-slide>
                <!-- 3 -->
                <swiper-slide>
-                    <div class="guide_box" id="gu_3">
-                         <p class="guide_tit"><span class="col_big">멤버 별</span> 방문장소
-                              <span class="col_big">필터링!</span></p>
-                         <p class="sub_text">각 멤버별로 방문한 장소를 필터링 해서<br>원하는 장소만 볼 수 있어요!</p>
-                         <div class="g_img_wrap">
-                              <img src="img/DC_guide/g3.png" alt="guide_img"><img>
-                         </div>
-                         <p class="mini_text">* 표기장소가 많아지면 지역별 필터링을 추가 예정이에요</p>
-                    </div>
+                   <div class="guide_box" id="gu_3">
+                       <p class="guide_tit"><span class="col_big"></span></p>
+                       <p class="sub_text"></p>
+                       <div class="g_img_wrap">
+                           <img src="img/DC_guide/g3.png" alt="guide_img">
+                       </div>
+                       <p class="mini_text"></p>
+                   </div>
                </swiper-slide>
                <!-- 4 -->
                <swiper-slide>
-                    <div class="guide_box" id="gu_4">
-                         <p class="guide_tit"><span class="col_big">방명록</span> 에서
-                              <span class="col_big">InSomnia Talk!</span>
-                         </p>
-                         <p class="sub_text">방문후기 및 지도 표기요청 등<br>로그인 없이 다양한 이야기를 할 수 있어요!</p>
-                         <div class="g_img_wrap">
-                              <img src="img/DC_guide/g4.png" alt="guide_img"><img>
-                         </div>
-                         <p class="mini_text">* ‘비회원으로 작성하겠습니다’ 에 체크 후 댓글을 작성해주세요</p>
-                    </div>
-          </swiper-container>
-          <!-- If we need pagination -->
-          <!-- <div class="swiper-pagination" style="background-color: black!important;"></div> -->
+                   <div class="guide_box" id="gu_4">
+                       <p class="guide_tit"><span class="col_big"></span></p>
+                       <p class="sub_text"></p>
+                       <div class="g_img_wrap">
+                           <img src="img/DC_guide/g4.png" alt="guide_img">
+                       </div>
+                       <p class="mini_text"></p>
+                   </div>
+               </swiper-slide>
+           </swiper-container>
+           
           </swiper-slide>
           <div class="bk_common_bg"></div>
      </div>
@@ -310,7 +306,7 @@
                                    id="thumbnail">
 
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/3XnnSwl-eYA?autoplay=1&mute=1&playlist=3XnnSwl-eYA&loop=1"
+                                   src="https://www.youtube.com/embed/3XnnSwl-eYA?autoplay=1&mute=1&playlist=3XnnSwl-eYA&loop=1&vq=small"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -331,7 +327,7 @@
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/eC592-Uql5M?autoplay=1&mute=1&playlist=eC592-Uql5M&loop=1"
+                                   src="https://www.youtube.com/embed/eC592-Uql5M?autoplay=1&mute=1&playlist=eC592-Uql5M&loop=1&vq=small"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -354,7 +350,7 @@
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/TvQgv5rKPS4?autoplay=1&mute=1&playlist=TvQgv5rKPS4&loop=1"
+                                   src="https://www.youtube.com/embed/TvQgv5rKPS4?autoplay=1&mute=1&playlist=TvQgv5rKPS4&loop=1&vq=small"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -376,7 +372,7 @@
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/ypAZhUSsUp8?autoplay=1&mute=1&playlist=ypAZhUSsUp8&loop=1"
+                                   src="https://www.youtube.com/embed/ypAZhUSsUp8?autoplay=1&mute=1&playlist=ypAZhUSsUp8&loop=1&vq=small"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -397,7 +393,7 @@
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/CCfdY_2JKHQ?autoplay=1&mute=1&playlist=CCfdY_2JKHQ&loop=1"
+                                   src="https://www.youtube.com/embed/CCfdY_2JKHQ?autoplay=1&mute=1&playlist=CCfdY_2JKHQ&loop=1&vq=small"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -418,11 +414,12 @@
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/dJoSuR_ubZI?autoplay=1&mute=1&playlist=dJoSuR_ubZI&loop=1"
+                                   src="https://www.youtube.com/embed/dJoSuR_ubZI?autoplay=1&mute=1&playlist=dJoSuR_ubZI&loop=1&vq=small"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
                               </iframe>
+
                          </div>
                          <div class="mute_mic mem_mute_mic"><img src="img/mic_mute.png"></div>
                          <p class="mem_cam_name">🐼다미</p>
@@ -439,7 +436,7 @@
 
                               <!-- 유튜브 영상 iframe -->
                               <iframe width="560" height="315" id="youtube-video"
-                                   src="https://www.youtube.com/embed/nK94MNmL-48?autoplay=1&mute=1&playlist=nK94MNmL-48&loop=1"
+                                   src="https://www.youtube.com/embed/nK94MNmL-48?autoplay=1&mute=1&playlist=nK94MNmL-48&loop=1&vq=small"
                                    title="YouTube video player" frameborder="0"
                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                    allowfullscreen>
@@ -474,6 +471,7 @@
 
      <!-- 공통 JS -->
      <script src="js/index.js"></script>
+
 
 </body>
 
