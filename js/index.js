@@ -578,75 +578,13 @@ $(document).ready(function () {
          |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
          \ (•◡•) /
       */
-
-// 언어별 텍스트를 객체로 관리
-// const langData = {
-//      ko: {
-//           noti_text: '※ 팬 메이드 사이트이며, 상업적 이용을 하지 않습니다.<br><span class="noti_small">ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED</span>',
-//           tip_text: '타이틀의 깃털을 뒤집거나 터치하여 다른 꿈속으로 이동할 수 있어요.',
-//           title_text: '- 틀린그림 찾기 -',
-//           start_text: 'Touch To Start'
-//      },
-//      eng: {
-//           noti_text: '※ This is a fan-made site, and it is not used for commercial purposes.<br><span class="noti_small">ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED</span>',
-//           tip_text: 'You can flip or touch the feather in the title to move into a different dream..',
-//           title_text: '- Find the Difference -',
-//           start_text: 'Touch To Start'
-//      }
-// };
-
-// // id 그룹을 각각정해서 (#gu_1 그안에 있는 div에 값넣고 번역할거임
-
-// // 텍스트 변경 함수
-// function setLanguage(lang) {
-//      document.querySelector('.noti_text').innerHTML = langData[lang].noti_text;
-//      document.querySelector('.tip_text').textContent = langData[lang].tip_text;
-//      document.querySelector('.title_text').textContent = langData[lang].title_text;
-//      document.querySelector('.start_text').textContent = langData[lang].start_text;
-// }
-
-// // 초기 언어 설정 (한국어)
-// setLanguage('ko');
-
-// // 한국어 -> 영어로 변환
-// document.getElementById('ko_lang').addEventListener('click', function () {
-//      document.getElementById('ko_lang').style.display = 'none';
-//      document.getElementById('eng_lang').style.display = 'inline-block';
-//      setLanguage('eng');
-//      // 언어 설정을 localStorage에 저장하여 다음페이지에서 변경된 언어설정 유지
-//      localStorage.setItem('language', 'eng');
-// });
-
-// // 영어 -> 한국어로 변환
-// document.getElementById('eng_lang').addEventListener('click', function () {
-//      document.getElementById('eng_lang').style.display = 'none';
-//      document.getElementById('ko_lang').style.display = 'inline-block';
-//      setLanguage('ko');
-//      // 언어 설정을 localStorage에 저장하여 다음페이지에서 변경된 언어설정 유지
-//      localStorage.setItem('language', 'ko');
-// });
-
-// 이상 원본코드
-// 이상 원본코드
-// 이상 원본코드
-
-
-
-
-
-/* 
-         |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-              언어변환 클릭이벤트
-         |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
-         \ (•◡•) /
-      */
 // 언어별 텍스트를 객체로 관리
 const langData = {
      ko: {
           gu_1: {
-               title: '테스트1와 <span class="col_big">컨텐츠<br></span>를 볼 수 있어요',
-               sub: 'DreamPlace는 드림캐쳐가<br>방문했던 장소를 표기해주는 지도에요',
-               mini: '* 오정보,오류 등 문의는 오른쪽 하단의 \'방명록\'을 이용해주세요<br>둘째줄'
+               title: ' <span class="col_big">DreamRoom</span> 에서 <br> 드림캐쳐와 함께 집중&힐링!',
+               sub: '드림캐쳐와 영상통화하듯 즐겁게<br>공부,휴식등 다양한 활동을 할 수 있는 공간이에요',
+               mini: '※ 팬 메이드 사이트이며, 상업적 이용을 하지 않습니다.<br>※ 카메라 / 위치 정보 수집을 하지 않습니다'
           },
           gu_2: {
                title: '테스트2와 <span class="col_big">컨텐츠<br></span>를 볼 수 있어요',
@@ -666,8 +604,8 @@ const langData = {
      },
      eng: {
           gu_1: {
-               title: 'Let\'s go to Dreamcatcher in <span class="col_big">Test 1</span>!',
-               sub: 'DreamPlace is a map that shows the places visited by Dreamcatcher.<br>',
+               title: '<span class="col_big">Focus & chill out</span><br>with Dreamcatcher!',
+               sub: 'DreamRoom is a space for enjoying various activities like studying, working, and relaxing, just like having a video call with Dreamcatcher<br>',
                mini: '* For inquiries regarding misinformation or errors, please use the "Guestbook" at the bottom right.<br>line_2'
           },
           gu_2: {

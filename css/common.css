@@ -54,20 +54,20 @@
 /* 한/영 전환버튼 */
 .tr_com_lang_wrap {
     position: fixed;
-    transform: translateX(-145px);
     left: 50%;
     z-index: 9999;
-    top: 7%;
+    top: 5%;
+    transform: translateX(-155px);
 }
 
 .tr_com_lang {
-    height: 18px;
-    line-height: 19px;
+    height: 13px;
+    line-height: 0;
     display: inline-block;
     z-index: 1;
     color: #fff;
     background: transparent;
-    /* background-color: #ffffff; */
+    padding: 14px 19px 8px 15px;
 }
 
 .lang_chan_btn {
@@ -126,7 +126,7 @@
     text-align: center;
     z-index: 999;
     height: 465px;
-    /* height: 100vh; */
+    /* height: 100%; */
 }
 
 .guide_slide_wrap div:first-child {
@@ -137,9 +137,13 @@
     display: block;
 }
 
+
+
+
 swiper-container {
     width: 100%;
     height: 100%;
+    /* position: absolute; */
 }
 
 swiper-slide {
@@ -151,7 +155,7 @@ swiper-slide {
 /* pagination 수정 */
 
 .swiper-pagination {
-    position: fixed !important;
+    position: absolute !important;
     text-align: center;
     transition: .3s opacity;
     transform: translate3d(0, 0, 0);
@@ -179,8 +183,8 @@ swiper-slide {
 
 
 .guide_tit {
-    font-size: 2.3rem;
-    line-height: 25px;
+    font-size: 2.1rem;
+    line-height: 26px;
     font-weight: 900;
     color: #333;
     margin-bottom: 10px;
@@ -196,9 +200,9 @@ swiper-slide {
 }
 
 .sub_text {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #666;
-    line-height: 20px;
+    line-height: 19px;
     margin-bottom: 20px;
     padding: 0 15px;
     font-weight: 600;
