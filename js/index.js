@@ -91,50 +91,6 @@ $(document).ready(function () {
           });
 });
 
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-// 이슈 : 한 탭 메모리 사용량이 너무 높음 -> 내 캠 해상도라도 줄임(근데 캠 안써도 gb단위인거 같은데..)
-// 노트북에서 캠 켰을때 메모리 사용량 달라지는지 테스트
-/* $(document).ready(function () {
-     navigator.mediaDevices.getUserMedia({
-         video: {
-             width: { ideal: 640 }, // 이상적인 너비
-             height: { ideal: 360 } // 이상적인 높이
-         }
-     })
-     .then(function (stream) {
-         var videoElement = document.getElementById("videoElement");
-         videoElement.srcObject = stream;
- 
-         // 카메라 사용이 허용되었으므로 이미지를 보여줍니다.
-         $(".waiting_text").hide();
- 
-         // 비디오를 좌우로 반전시킵니다.
-         videoElement.style.transform = "scaleX(-1)";
-     })
-     .catch(function (error) {
-         console.log("카메라 사용 권한을 얻지 못했습니다.", error);
-         // 카메라 사용이 허용되지 않았으므로 이미지를 숨깁니다.
-         $(".waiting_text").show();
-     });
- });
-  */
 
 
 
@@ -151,24 +107,9 @@ $(document).ready(function () {
      const muteMic = $('.mem_mute_mic');
      const youtubePlayer = document.getElementById('youtube-video');
 
-     // 가장 가까운 .wating_img 요소 찾기
-     const image = iframe.closest('li').find('.wating_img');
-
-     // 아이프레임 로드 이벤트 처리
-     iframe.on('load', function () {
-
-          // 아이프레임 로딩 성공 시 이미지 숨기기
-          image.hide();
-     });
-
-     // 아이프레임 로딩 실패 시 이미지 보이기
-     iframe.on('error', function () {
-          image.show();
-     });
-
      // YouTube 비디오 뮤트 설정
      youtubePlayer.addEventListener('load', function () {
-          //     youtubePlayer.contentWindow.postMessage('{"event":"command","func":"' + 'mute' + '","args":""}', '*');
+
      });
 
      // YouTube 비디오 반복 재생 시 뮤트 설정
@@ -523,39 +464,32 @@ $(document).ready(function () {
 });
 
 
-
-
-
 // |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-//     팝업 숨기기
+//     팝업 숨기기(스크롤 막기)
 // |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
 //    \ (•◡•) /
-
-
 $(document).ready(function () {
-     $(".header_right").on("click", function () {
+     // 팝업 열기
+     $(".guide_btn").on("click", function () {
           $(".popup_wrap_inner").show(100);
      });
 
-     $(".close_btn ,.bk_common_bg").on("click", function () {
+     const popElement = $('.popup_wrap_inner');
+     if (popElement.css('display') === 'block') {
+          $('body').css('overflow', 'hidden'); // 스크롤 막기
+     }
+     // 팝업 닫기
+     $(".close_btn, .bk_common_bg").on("click", function () {
           $(".popup_wrap_inner").hide(100);
+          $("body").css("overflow", "auto"); // 스크롤 다시 활성화
      });
-
 });
-
-
 
 // |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
 //     첫 진입시에만 팝업, 이후 숨김
 // |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
 // \ (•◡•) /
-/* 잠시 숨김 test */
-/* 잠시 숨김 test */
-/* 잠시 숨김 test */
-/* 잠시 숨김 test */
-/* 잠시 숨김 test */
-/* 잠시 숨김 test */
-/* $(document).ready(function () {
+$(document).ready(function () {
      var popDisplay = $.cookie('popDisplay');
 
      if (!popDisplay) {
@@ -564,64 +498,62 @@ $(document).ready(function () {
                path: '/'
           });
      } else {
-          $('#pop').hide(); 
+          $('#pop').hide();
      }
-}); */
+});
 
 
 
+// |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
+//      언어변환 클릭이벤트
+// |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
+// \ (•◡•) /
 
 
-/* 
-         |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
-              언어변환 클릭이벤트
-         |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
-         \ (•◡•) /
-      */
 // 언어별 텍스트를 객체로 관리
 const langData = {
      ko: {
           gu_1: {
                title: ' <span class="col_big">DreamRoom</span> 에서 <br> 드림캐쳐와 함께 집중&힐링!',
                sub: '드림캐쳐와 영상통화하듯 즐겁게<br>공부,휴식등 다양한 활동을 할 수 있는 공간이에요',
-               mini: '※ 팬 메이드 사이트이며, 상업적 이용을 하지 않습니다.<br>※ 카메라 / 위치 정보 수집을 하지 않습니다'
+               mini: '※ 팬 메이드 사이트이며, 상업적 이용을 하지 않습니다.'
           },
           gu_2: {
-               title: '테스트2와 <span class="col_big">컨텐츠<br></span>를 볼 수 있어요',
-               sub: '장소이름 클릭 시 정보(영업시간 등)를,<br>컨텐츠 클릭 시 드림캐쳐의 모습을 볼 수 있어요',
-               mini: '* 맵 오른쪽 하단의 \'방명록\' 에서 더 많은 장소 제보를 기다려요'
+               title: '<span class="col_big">ASMR</span>을 들으며<br> 더 깊이 빠져볼까요?',
+               sub: 'BGM Player의 재생버튼을 눌러 장작, 빗소리,<br>키보드 타건 소리를 들어 보세요',
+               mini: '* 추후 다양한 ASMR이 업데이트 됩니다'
           },
           gu_3: {
-               title: '테스트3 방문장소 <span class="col_big">컨텐츠<br></span>',
-               sub: '각 멤버별로 방문한 장소를 필터링 해서<br>원하는 장소만 볼 수 있어요!',
-               mini: '* 표기장소가 많아지면 지역별 필터링을 추가 예정이에요'
+               title: '최애와의 특별한 시간,<br>멤버 별 <span class="col_big">1:1 미팅!</span>',
+               sub: '최애의 방에서 더욱 집중! 화면을 터치해<br>음소거를 해제하면, 목소리를 들을 수 있어요',
+               mini: '※ 카메라 / 위치 정보 수집을 하지 않습니다'
           },
           gu_4: {
-               title: '테스트4 에서 <span class="col_big">컨텐츠<br></span>',
-               sub: '방문후기 및 지도 표기요청 등<br>로그인 없이 다양한 이야기를 할 수 있어요!',
-               mini: '* ‘비회원으로 작성하겠습니다’ 에 체크 후 댓글을 작성해주세요'
+               title: '필요한 기능을<br><span class="col_big">Show / Hide / Move</span>',
+               sub: '오른쪽 하단의 서랍을 꺼내 각 기능을 Show/Hide,<br>BGM player와 시계를 드레그해서 옮길 수 있어요',
+               mini: 'ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED'
           }
      },
      eng: {
           gu_1: {
                title: '<span class="col_big">Focus & chill out</span><br>with Dreamcatcher!',
-               sub: 'DreamRoom is a space for enjoying various activities like studying, working, and relaxing, just like having a video call with Dreamcatcher<br>',
-               mini: '* For inquiries regarding misinformation or errors, please use the "Guestbook" at the bottom right.<br>line_2'
+               sub: 'DreamRoom is a space to enjoy various activities(study,etc.) with Dreamcatcher',
+               mini: '※ This is a fan-made site, not for commercial use'
           },
           gu_2: {
-               title: 'You can see <span class="col_big">content</span> and <span class="col_big">Test 2</span>!',
-               sub: 'Clicking on the location name shows information (opening hours, etc.),<br> and clicking on the content shows the members of Dreamcatcher.',
-               mini: '* We are waiting for more location suggestions in the "Guestbook" at the bottom right of the map.'
+               title: 'Shall we dive deeper <br>while listening to <span class="col_big">ASMR</span>?',
+               sub: 'Press the play button on the BGM Player to hear firewood, rain, and keyboard sounds.',
+               mini: '* Various ASMR will be updated later '
           },
           gu_3: {
-               title: 'Filtering the visited places in <span class="col_big">Test 3</span>!',
-               sub: 'You can filter places visited by each member<br>to see only the places you want!',
-               mini: '* As the number of listed places increases, we plan to add regional filtering.'
+               title: '1:1 special meeting with <br>your <span class="col_big">bias</span>!',
+               sub: 'Focus more in your bias\'s room! Tap the screen to unmute and hear their voice.',
+               mini: '※ No camera or location data is collected.'
           },
           gu_4: {
-               title: 'Let\'s talk about <span class="col_big">InSomnia</span> in Test 4!',
-               sub: 'You can share visit reviews and request map markings<br>without logging in and share various stories!',
-               mini: '* Please check "I will write as a non-member" before submitting your comment.'
+               title: ' <span class="col_big">Show / Hide / Move</span> the features you need',
+               sub: 'Open the bottom-right drawer to Show/Hide features and drag to move BGM player& clock',
+               mini: 'ⓒ DREAMCATCHER.CO ALL RIGHTS RESERVED'
           }
      }
 };

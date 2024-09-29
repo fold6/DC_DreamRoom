@@ -28,7 +28,7 @@
 
      <!-- CSS  -->
      <link href="css/font.css" rel="stylesheet" />
-     <link href="css/common.css?ver=0928" rel="stylesheet" />
+     <link href="css/common.css?ver=09299998" rel="stylesheet" />
      <link href="css/reset.css" rel="stylesheet" />
 
      <!-- Font awesome icon  -->
@@ -52,18 +52,24 @@
      </script>
 
 
+
 </head>
 <!-- 
  |￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣|
+-240929
+- 설명 슬라이드 : 가이드 한/영 설명 넣기 완료 + dark 테마 css수정 완료
+- 한영변환 버튼 터치범위 수정완료
+- 설명 슬라이드 : 설명 이미지 작업완료
+- 외부 작업 깃에 올리기 완료
+- 팝업 떴을때 위에 배경 드레그 안되게 수정완료
+- 가이드 팝업 다시 보는 버튼 넣기완료
+- 포탈열기 완료
+- 깃 리드미 설명작성 완료
 
--240923
--  설명슬라이드에 한/영 전환버튼 및 기능추가 (위치잡기/JS동작완 -- 일러스트에 있는 내용+번역본 넣어야함)
 
--240928
-- 설명 슬라이드 : 내용+번역본 넣기
-- 한영변환 버튼 터치범위 수정
-
-
+===해야될 작업
+- sns 공유용 설명이미지 작업 및 글 작성
+- 공유
  |＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿|
  \ (•◡•) / Update MEMO
  -->
@@ -83,7 +89,7 @@
      </div>
 
      <!-- 팝업 -->
-     <div class="popup_wrap_inner" id="pop" style="display: block;">
+     <div class="popup_wrap_inner" id="pop" style="display: none;">
 
           <!-- Guide Notice -->
           <div class="close_btn"><img src="img/close_btn.png"></div>
@@ -110,50 +116,50 @@
           <swiper-container class="guide_slide_wrap" pagination="true">
                <!-- 1 -->
                <swiper-slide>
-                   <div class="guide_box" id="gu_1">
-                       <p class="guide_tit"><span class="col_big"></span></p>
-                       <p class="sub_text"></p>
-                       <div class="g_img_wrap">
-                           <img src="img/DC_guide/g1.png" alt="guide_img">
-                       </div>
-                       <p class="mini_text"></p>
-                   </div>
+                    <div class="guide_box" id="gu_1">
+                         <p class="guide_tit"><span class="col_big"></span></p>
+                         <p class="sub_text"></p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g1.png?ver=0929" alt="guide_img">
+                         </div>
+                         <p class="mini_text"></p>
+                    </div>
                </swiper-slide>
                <!-- 2 -->
                <swiper-slide>
-                   <div class="guide_box" id="gu_2">
-                       <p class="guide_tit"><span class="col_big"></span></p>
-                       <p class="sub_text"></p>
-                       <div class="g_img_wrap">
-                           <img src="img/DC_guide/g2.png" alt="guide_img">
-                       </div>
-                       <p class="mini_text"></p>
-                   </div>
+                    <div class="guide_box" id="gu_2">
+                         <p class="guide_tit"><span class="col_big"></span></p>
+                         <p class="sub_text"></p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g2.png?ver=0929" alt="guide_img">
+                         </div>
+                         <p class="mini_text"></p>
+                    </div>
                </swiper-slide>
                <!-- 3 -->
                <swiper-slide>
-                   <div class="guide_box" id="gu_3">
-                       <p class="guide_tit"><span class="col_big"></span></p>
-                       <p class="sub_text"></p>
-                       <div class="g_img_wrap">
-                           <img src="img/DC_guide/g3.png" alt="guide_img">
-                       </div>
-                       <p class="mini_text"></p>
-                   </div>
+                    <div class="guide_box" id="gu_3">
+                         <p class="guide_tit"><span class="col_big"></span></p>
+                         <p class="sub_text"></p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g3.png?ver=0929" alt="guide_img">
+                         </div>
+                         <p class="mini_text"></p>
+                    </div>
                </swiper-slide>
                <!-- 4 -->
                <swiper-slide>
-                   <div class="guide_box" id="gu_4">
-                       <p class="guide_tit"><span class="col_big"></span></p>
-                       <p class="sub_text"></p>
-                       <div class="g_img_wrap">
-                           <img src="img/DC_guide/g4.png" alt="guide_img">
-                       </div>
-                       <p class="mini_text"></p>
-                   </div>
+                    <div class="guide_box" id="gu_4">
+                         <p class="guide_tit"><span class="col_big"></span></p>
+                         <p class="sub_text"></p>
+                         <div class="g_img_wrap">
+                              <img src="img/DC_guide/g4.png?ver=0929" alt="guide_img">
+                         </div>
+                         <p class="mini_text"></p>
+                    </div>
                </swiper-slide>
-           </swiper-container>
-           
+          </swiper-container>
+
           </swiper-slide>
           <div class="bk_common_bg"></div>
      </div>
@@ -161,11 +167,10 @@
 
      <header>
           <div class="header_in">
-               <p class="title">Dream Room</p>
+               <p class="title">Dream Room <img class="guide_btn" src="img//howto_btn.png" alt="guide_btn"></p>
           </div>
           <div class="fullpage" id="fullscreenBtn"><i class="fas fa-expand"></i></div>
      </header>
-
 
 
      <!-- 시계 위젯 -->
@@ -466,9 +471,8 @@
      </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
      <!-- 제이쿼리 쿠키 : 쿠키는 제이쿼리보다 밑에 있어야 동작 -->
-
      <!-- 공통 JS -->
-     <script src="js/index.js?ver=0928"></script>
+     <script src="js/index.js?ver=09299998"></script>
 
 
 </body>
