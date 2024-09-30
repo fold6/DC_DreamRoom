@@ -78,7 +78,6 @@ $(document).ready(function () {
           .then(function (stream) {
                var videoElement = document.getElementById("videoElement");
                videoElement.srcObject = stream;
-               // 카메라 사용이 허용되었으므로 이미지를 보여줍니다.
                $(".waiting_text").hide();
 
                // 비디오를 좌우로 반전시킵니다.
@@ -86,7 +85,6 @@ $(document).ready(function () {
           })
           .catch(function (error) {
                console.log("카메라 사용 권한을 얻지 못했습니다.", error);
-               // 카메라 사용이 허용되지 않았으므로 이미지를 숨깁니다.
                $(".waiting_text").show();
           });
 });
@@ -260,7 +258,6 @@ $(document).ready(function () {
      }
 
      function showPosition(position) {
-          // 위치 정보를 가져와서 사용(현재시간표기<외국에서 되는지 테스트 필요)
           showClock();
      }
 
@@ -269,10 +266,9 @@ $(document).ready(function () {
      getLocation();
 
      // 클릭하지 않고 페이지가 로드될 때 시계를 보여주기 위해 
-     // showClock() 함수를 호출합니다.
+     // showClock() 함수를 호출
      showClock();
 
-     // .box_clock를 클릭할 때 .widget_active_clock 클래스를 토글합니다.
      $(".box_clock").click(function () {
           $(this).closest('img').toggleClass("widget_active_clock");
      });
@@ -455,7 +451,7 @@ window.onload = function () {
 
 $(document).ready(function () {
 
-     $(".sideblock li, .fullpage, .controls button, .box_arrow_btn ,.drag_box_inner_btn li").hover(
+     $(".sideblock li, .fullpage, .controls button, .box_arrow_btn ,.drag_box_inner_btn li,.guide_btn, .tr_com_lang_wrap, .close_btn").hover(
           function () {
                $(this).css("cursor", "url('./img/DC_cursor/pointer.png'), pointer");
           }
@@ -515,13 +511,13 @@ const langData = {
      ko: {
           gu_1: {
                title: ' <span class="col_big">DreamRoom</span> 에서 <br> 드림캐쳐와 함께 집중&힐링!',
-               sub: '드림캐쳐와 영상통화하듯 즐겁게<br>공부,휴식등 다양한 활동을 할 수 있는 공간이에요',
+               sub: 'DreamRoom은 드림캐쳐와 영상통화하듯 즐겁게<br>공부,휴식등 다양한 활동을 할 수 있는 공간이에요',
                mini: '※ 팬 메이드 사이트이며, 상업적 이용을 하지 않습니다.'
           },
           gu_2: {
                title: '<span class="col_big">ASMR</span>을 들으며<br> 더 깊이 빠져볼까요?',
                sub: 'BGM Player의 재생버튼을 눌러 장작, 빗소리,<br>키보드 타건 소리를 들어 보세요',
-               mini: '* 추후 다양한 ASMR이 업데이트 됩니다'
+               mini: '&nbsp; '
           },
           gu_3: {
                title: '최애와의 특별한 시간,<br>멤버 별 <span class="col_big">1:1 미팅!</span>',
@@ -543,7 +539,7 @@ const langData = {
           gu_2: {
                title: 'Shall we dive deeper <br>while listening to <span class="col_big">ASMR</span>?',
                sub: 'Press the play button on the BGM Player to hear firewood, rain, and keyboard sounds.',
-               mini: '* Various ASMR will be updated later '
+               mini: '&nbsp; '
           },
           gu_3: {
                title: '1:1 special meeting with <br>your <span class="col_big">bias</span>!',

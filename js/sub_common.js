@@ -200,10 +200,10 @@ $(document).ready(function () {
      getLocation();
 
      // 클릭하지 않고 페이지가 로드될 때 시계를 보여주기 위해 
-     // showClock() 함수를 호출합니다.
+     // showClock() 함수를 호출
      showClock();
 
-     // .box_clock를 클릭할 때 .widget_active_clock 클래스를 토글합니다.
+     // .box_clock를 클릭할 때 .widget_active_clock 클래스를 토글
      $(".box_clock").click(function () {
           $(this).closest('img').toggleClass("widget_active_clock");
      });
@@ -393,7 +393,6 @@ $(document).ready(function () {
           if (window.innerWidth <= 768) {
                // 화면 너비가 768px 이하일 때만 실행 (미디어쿼리)
                let isClicked = $(this).data("clicked");
-               // $(".drag_box").css("right", isClicked ? "-315px" : "-70px");
                $(".drag_box").css("right", isClicked ? "-265px" : "-120px");
                $(".box_arrow_btn").css("transform", isClicked ? "scaleX(1)" :
                     "scaleX(-1)");

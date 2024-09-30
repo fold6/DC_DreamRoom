@@ -44,28 +44,28 @@
 
 /* 팝업 */
 .popup_wrap_inner {
-    position: fixed;
+    position: relative;
     z-index: 999999;
     width: 100%;
     display: none;
-    /* 숨겨놓고 JS와 쿠키로 보임/숨김 실행 */
+    top: 0;
+    left: 0;
 }
 
 /* 한/영 전환버튼 */
 .tr_com_lang_wrap {
-    position: fixed;
-    left: 50%;
+    position: relative;
     z-index: 9999;
-    top: 5%;
-    transform: translateX(-155px);
 }
 
 .tr_com_lang {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    translate: -160px;
+    transform: translateY(-40px);
     opacity: .8;
-    height: 13px;
-    line-height: 0;
-    display: inline-block;
-    z-index: 1;
+    height: 20px;
     color: #fff;
     background: transparent;
     padding: 14px 19px 8px 15px;
@@ -90,7 +90,6 @@
 .top_line {
     position: fixed;
     padding: 10px 15px;
-    /* display: flex; */
     justify-content: space-between;
     top: 0;
     width: 100%;
@@ -128,9 +127,7 @@
     width: 300px;
     text-align: center;
     z-index: 999;
-    /* height: 465px; */
     height: 445px;
-    /* height: 100%; */
 }
 
 .guide_slide_wrap div:first-child {
@@ -147,7 +144,6 @@
 swiper-container {
     width: 100%;
     height: 100%;
-    /* position: absolute; */
 }
 
 swiper-slide {
@@ -177,9 +173,8 @@ swiper-slide {
 
 /* 슬라이드 박스 안 */
 .guide_box {
+    position: relative;
     background-color: #0e0e0e8a;
-    /* 보라배경 test */
-    /* background-color: #2000458a; */
     filter: drop-shadow(0px 0px 2px #333);
     border-radius: 15px;
     width: calc(100% - 10px);
@@ -194,7 +189,6 @@ swiper-slide {
     font-weight: 900;
     color: #dfdfdf;
     margin-bottom: 10px;
-    /* white-space: pre-line; */
     padding: 0 15px;
 }
 
@@ -206,12 +200,13 @@ swiper-slide {
 }
 
 .sub_text {
-    font-size: 1.2rem;
-    color: #c1c1c1;
-    line-height: 16px;
-    margin-bottom: 20px;
-    padding: 0 15px;
     font-weight: 600;
+    font-size: 1.3rem;
+    color: #c1c1c1;
+    line-height: 17px;
+    margin-bottom: 20px;
+    padding: 0 13px;
+
 }
 
 .g_img_wrap {
@@ -266,10 +261,7 @@ swiper-slide {
 }
 
 .cam_wrap {
-    /* background-color: yellow; */
-    /* width: 90%; */
     width: calc(100% - 80px);
-    /* padding: 0 20px; */
     padding-left: 5px;
     height: 100%;
     margin-top: 140px;
@@ -317,7 +309,6 @@ swiper-slide {
     width: 100%;
     height: 100%;
     position: relative;
-    /* background-color: #00000071; */
     background-color: #000000ad;
     background-image: url('../img/me_default.png');
     background-size: 60px;
@@ -473,12 +464,7 @@ html {
 .clock_widget {
     display: inline-block;
     font-size: 4rem;
-    /* font-family: ; */
     background-color: #1a0197;
-
-    /* width: calc(100% - 50px); */
-    /* margin: 0 40px; */
-
 }
 
 .clock_widget div {
@@ -509,8 +495,6 @@ html {
     box-shadow: 1px 1px 3px #00000082;
     width: 240px;
     height: 85px;
-    /* background-color: rgb(68 0 177 / 44%)!important; */
-    /* test */
     background-color: #0000004f;
     text-align: center;
     cursor: move;
@@ -544,9 +528,6 @@ html {
 .controls {
     display: flex;
     justify-content: center;
-    /* align-items: flex-start; */
-    /* align-items: space-evenly; */
-
 }
 
 .blur_filter {
@@ -622,13 +603,12 @@ header {
     position: absolute;
     top: 9px;
     opacity: .6;
-    padding-left: 5px;
+    padding: 0 6px;
 }
 
 .guide_btn:hover {
-    filter: drop-shadow(0px 0px 2px #fff);
-    transition: ease-in-out 0.2s;
-    /* filter: brightness(125%); */
+    filter: drop-shadow(0px 0px 2px #ffffffb2);
+    transition: ease-in-out 0.3s;
 }
 
 
@@ -682,7 +662,6 @@ main {
 .sideblock {
     margin-top: 20px;
     width: 100%;
-    /* background-color: #f1f1f1; */
     text-align: center;
     margin-bottom: 100px;
 }
@@ -717,7 +696,6 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 30px; */
 }
 
 .side_all {
@@ -755,8 +733,6 @@ main {
     border-radius: 50%;
     overflow: hidden;
     object-position: center center;
-    /* object-fit: h; */
-    /* background-color: #ededed; */
     display: block;
     box-sizing: border-box;
     transition: box-shadow 0.2s ease;
@@ -776,7 +752,6 @@ main {
     color: #ccc;
     padding-top: 7px;
     font-weight: 500;
-    /* display: none; */
 }
 
 /* 선택된 상태 기준점 */
@@ -827,7 +802,6 @@ main {
     }
 
     100% {
-        /* transform: scale(0); */
         opacity: 0;
     }
 }
@@ -836,7 +810,6 @@ main {
 .speak_act i {
     font-size: 1rem;
     color: #fff;
-    /* padding: 4px; */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1081,7 +1054,6 @@ main {
         cursor: move;
         position: absolute;
         right: 3.5%;
-        /* top: 4%; */
         border-radius: 10px;
         z-index: 500;
         top: 30px;
@@ -1194,7 +1166,6 @@ main {
     /* 멤버캠 */
     .cam_wrap {
         height: 100%;
-        /* margin-left: 50px; */
         margin-top: 95px;
         display: inline-block;
         text-align: center;
@@ -1269,7 +1240,6 @@ main {
         cursor: move;
         position: absolute;
         right: 3.5%;
-        /* top: 4%; */
         border-radius: 10px;
         z-index: 500;
     }
